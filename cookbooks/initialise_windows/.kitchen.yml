@@ -1,0 +1,28 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 2048
+  require_chef_omnibus: 12.19.36
+  network:
+    -  ["public_network"]
+  provider: virtualbox
+  vm_hostname: kitchenconnor
+
+transport:
+  name: winrm
+  elevated: true
+
+provisioner:
+  name: chef_zero
+  log_file: c:\chef\chef-client.log
+  # log_level: debug
+  data_bags_path: ..\..\data_bags
+
+platforms:
+  - name: win_2012
+
+suites:
+  - name: default
+    run_list:
+      - recipe[initialise_windows::default]
