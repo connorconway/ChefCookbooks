@@ -1,4 +1,4 @@
-This directory contains the cookbooks used to configure systems in your infrastructure with Chef - an example basic cookbook called `example` has been automatically created for you.
+This directory contains the cookbooks used to configure systems in your infrastructure with Chef.
 
 Knife needs to be configured to know where the cookbooks are located with the `cookbook_path` setting. If this is not set, then several cookbook operations will fail to work properly.
 
@@ -19,9 +19,9 @@ Configure knife to use your preferred copyright holder, email contact and licens
 
 Supported values for `cookbook_license` are "apachev2", "mit","gplv2","gplv3",  or "none". These settings are used to prefill comments in the default recipe, and the corresponding values in the metadata.rb. You are free to change the the comments in those files.
 
-Create new cookbooks in this directory with Chef.
+Create new cookbooks in this directory with Knife.
 
-    chef generate cookbook COOKBOOK
+    knife cookbook create COOKBOOK
 
 This will create all the cookbook directory components. You don't need to use them all, and can delete the ones you don't need. It also creates a README file, metadata.rb and default recipe.
 
@@ -33,7 +33,7 @@ The first and recommended method is to use a vendor branch if you're using Git. 
 
 This will:
 
-* Download the cookbook tarball from the Chef Supermarket.
+* Download the cookbook tarball from cookbooks.opscode.com.
 * Ensure its on the git master branch.
 * Checks for an existing vendor branch, and creates if it doesn't.
 * Checks out the vendor branch (chef-vendor-COOKBOOK).

@@ -1,0 +1,894 @@
+I, [2018-03-06T12:27:15.272754 #24836]  INFO -- default-win-2012: -----> Converging <default-win-2012>...
+I, [2018-03-06T12:27:15.275686 #24836]  INFO -- default-win-2012: Preparing files for transfer
+I, [2018-03-06T12:27:15.275686 #24836]  INFO -- default-win-2012: Preparing dna.json
+I, [2018-03-06T12:27:15.280574 #24836]  INFO -- default-win-2012: Resolving cookbook dependencies with Berkshelf 6.3.1...
+I, [2018-03-06T12:27:15.773280 #24836]  INFO -- default-win-2012: Removing non-cookbook files before transfer
+I, [2018-03-06T12:27:15.820205 #24836]  INFO -- default-win-2012: Preparing data_bags
+I, [2018-03-06T12:27:15.829003 #24836]  INFO -- default-win-2012: Preparing validation.pem
+I, [2018-03-06T12:27:15.833890 #24836]  INFO -- default-win-2012: Preparing client.rb
+I, [2018-03-06T12:27:19.243725 #24836]  INFO -- default-win-2012: -----> Chef Omnibus installation detected (12.19.36)
+I, [2018-03-06T12:27:20.419764 #24836]  INFO -- default-win-2012: Transferring files to <default-win-2012>
+I, [2018-03-06T12:27:27.306886 #24836]  INFO -- default-win-2012: Starting Chef Client, version 12.19.36
+I, [2018-03-06T12:27:31.079477 #24836]  INFO -- default-win-2012: resolving cookbooks for run list: ["chocolatey::default", "initialise_windows::default"]
+I, [2018-03-06T12:27:31.095118 #24836]  INFO -- default-win-2012: Synchronizing Cookbooks:
+I, [2018-03-06T12:27:31.112716 #24836]  INFO -- default-win-2012:   - chocolatey (1.2.1)
+I, [2018-03-06T12:27:31.136180 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:31.153773 #24836]  INFO -- default-win-2012:   - windows (3.5.2)
+I, [2018-03-06T12:27:31.171370 #24836]  INFO -- default-win-2012:   - ohai (5.2.2)
+I, [2018-03-06T12:27:31.191900 #24836]  INFO -- default-win-2012: Installing Cookbook Gems:
+I, [2018-03-06T12:27:31.209496 #24836]  INFO -- default-win-2012: Compiling Cookbooks...
+I, [2018-03-06T12:27:31.227093 #24836]  INFO -- default-win-2012: Converging 3 resources
+I, [2018-03-06T12:27:31.243712 #24836]  INFO -- default-win-2012: Recipe: chocolatey::default
+I, [2018-03-06T12:27:31.263263 #24836]  INFO -- default-win-2012:   * cookbook_file[C:\Users\vagrant\AppData\Local\Temp\kitchen\cache/chocolatey-install.ps1] action create
+I, [2018-03-06T12:27:31.284771 #24836]  INFO -- default-win-2012:     - create new file C:\Users\vagrant\AppData\Local\Temp\kitchen\cache/chocolatey-install.ps1
+I, [2018-03-06T12:27:31.302367 #24836]  INFO -- default-win-2012:     - update content in file C:\Users\vagrant\AppData\Local\Temp\kitchen\cache/chocolatey-install.ps1 from none to 4298e2
+I, [2018-03-06T12:27:31.319964 #24836]  INFO -- default-win-2012:     --- C:\Users\vagrant\AppData\Local\Temp\kitchen\cache/chocolatey-install.ps1	2018-03-06 12:27:30.000000000 +0000
+I, [2018-03-06T12:27:31.338538 #24836]  INFO -- default-win-2012:     +++ C:\Users\vagrant\AppData\Local\Temp\kitchen\cache/chef-chocolatey-install20180306-696-1uc3r4.ps1	2018-03-06 12:27:30.000000000 +0000
+I, [2018-03-06T12:27:31.356135 #24836]  INFO -- default-win-2012:     @@ -1 +1,336 @@
+I, [2018-03-06T12:27:31.374708 #24836]  INFO -- default-win-2012:     +# =====================================================================
+I, [2018-03-06T12:27:31.393284 #24836]  INFO -- default-win-2012:     +# Copyright 2011 - Present RealDimensions Software, LLC, and the
+I, [2018-03-06T12:27:31.410879 #24836]  INFO -- default-win-2012:     +# original authors/contributors from ChocolateyGallery
+I, [2018-03-06T12:27:31.428477 #24836]  INFO -- default-win-2012:     +# at https://github.com/chocolatey/chocolatey.org
+I, [2018-03-06T12:27:31.446072 #24836]  INFO -- default-win-2012:     +#
+I, [2018-03-06T12:27:31.463669 #24836]  INFO -- default-win-2012:     +# Licensed under the Apache License, Version 2.0 (the "License");
+I, [2018-03-06T12:27:31.483222 #24836]  INFO -- default-win-2012:     +# you may not use this file except in compliance with the License.
+I, [2018-03-06T12:27:31.501796 #24836]  INFO -- default-win-2012:     +# You may obtain a copy of the License at
+I, [2018-03-06T12:27:31.518414 #24836]  INFO -- default-win-2012:     +#
+I, [2018-03-06T12:27:31.536989 #24836]  INFO -- default-win-2012:     +#   http://www.apache.org/licenses/LICENSE-2.0
+I, [2018-03-06T12:27:31.559474 #24836]  INFO -- default-win-2012:     +#
+I, [2018-03-06T12:27:31.577070 #24836]  INFO -- default-win-2012:     +# Unless required by applicable law or agreed to in writing, software
+I, [2018-03-06T12:27:31.595645 #24836]  INFO -- default-win-2012:     +# distributed under the License is distributed on an "AS IS" BASIS,
+I, [2018-03-06T12:27:31.612263 #24836]  INFO -- default-win-2012:     +# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+I, [2018-03-06T12:27:31.630838 #24836]  INFO -- default-win-2012:     +# See the License for the specific language governing permissions and
+I, [2018-03-06T12:27:31.649412 #24836]  INFO -- default-win-2012:     +# limitations under the License.
+I, [2018-03-06T12:27:31.671896 #24836]  INFO -- default-win-2012:     +# =====================================================================
+I, [2018-03-06T12:27:31.695358 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:31.713933 #24836]  INFO -- default-win-2012:     +# Environment Variables, specified as $env:NAME in PowerShell.exe and %NAME% in cmd.exe.
+I, [2018-03-06T12:27:31.732508 #24836]  INFO -- default-win-2012:     +# For explicit proxy, please set $env:chocolateyProxyLocation and optionally $env:chocolateyProxyUser and $env:chocolateyProxyPassword
+I, [2018-03-06T12:27:31.749131 #24836]  INFO -- default-win-2012:     +# For an explicit version of Chocolatey, please set $env:chocolateyVersion = 'versionnumber'
+I, [2018-03-06T12:27:31.767700 #24836]  INFO -- default-win-2012:     +# To target a different url for chocolatey.nupkg, please set $env:chocolateyDownloadUrl = 'full url to nupkg file'
+I, [2018-03-06T12:27:31.785297 #24836]  INFO -- default-win-2012:     +# NOTE: $env:chocolateyDownloadUrl does not work with $env:chocolateyVersion.
+I, [2018-03-06T12:27:31.803871 #24836]  INFO -- default-win-2012:     +# To use built-in compression instead of 7zip (requires additional download), please set $env:chocolateyUseWindowsCompression = 'true'
+I, [2018-03-06T12:27:31.822444 #24836]  INFO -- default-win-2012:     +# To bypass the use of any proxy, please set $env:chocolateyIgnoreProxy = 'true'
+I, [2018-03-06T12:27:31.841019 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:31.858616 #24836]  INFO -- default-win-2012:     +#specifically use the API to get the latest version (below)
+I, [2018-03-06T12:27:31.876211 #24836]  INFO -- default-win-2012:     +$url = ''
+I, [2018-03-06T12:27:31.893809 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:31.911405 #24836]  INFO -- default-win-2012:     +$chocolateyVersion = $env:chocolateyVersion
+I, [2018-03-06T12:27:31.931935 #24836]  INFO -- default-win-2012:     +if (![string]::IsNullOrEmpty($chocolateyVersion)){
+I, [2018-03-06T12:27:31.950508 #24836]  INFO -- default-win-2012:     +  Write-Output "Downloading specific version of Chocolatey: $chocolateyVersion"
+I, [2018-03-06T12:27:31.970061 #24836]  INFO -- default-win-2012:     +  $url = "https://chocolatey.org/api/v2/package/chocolatey/$chocolateyVersion"
+I, [2018-03-06T12:27:31.987658 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:32.004275 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:32.021873 #24836]  INFO -- default-win-2012:     +$chocolateyDownloadUrl = $env:chocolateyDownloadUrl
+I, [2018-03-06T12:27:32.040449 #24836]  INFO -- default-win-2012:     +if (![string]::IsNullOrEmpty($chocolateyDownloadUrl)){
+I, [2018-03-06T12:27:32.059022 #24836]  INFO -- default-win-2012:     +  Write-Output "Downloading Chocolatey from : $chocolateyDownloadUrl"
+I, [2018-03-06T12:27:32.077597 #24836]  INFO -- default-win-2012:     +  $url = "$chocolateyDownloadUrl"
+I, [2018-03-06T12:27:32.099104 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:32.116700 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:32.137230 #24836]  INFO -- default-win-2012:     +if ($env:TEMP -eq $null) {
+I, [2018-03-06T12:27:32.155803 #24836]  INFO -- default-win-2012:     +  $env:TEMP = Join-Path $env:SystemDrive 'temp'
+I, [2018-03-06T12:27:32.173399 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:32.190020 #24836]  INFO -- default-win-2012:     +$chocTempDir = Join-Path $env:TEMP "chocolatey"
+I, [2018-03-06T12:27:32.208593 #24836]  INFO -- default-win-2012:     +$tempDir = Join-Path $chocTempDir "chocInstall"
+I, [2018-03-06T12:27:32.233035 #24836]  INFO -- default-win-2012:     +if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
+I, [2018-03-06T12:27:32.253561 #24836]  INFO -- default-win-2012:     +$file = Join-Path $tempDir "chocolatey.zip"
+I, [2018-03-06T12:27:32.280934 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:32.297553 #24836]  INFO -- default-win-2012:     +# PowerShell v2/3 caches the output stream. Then it throws errors due
+I, [2018-03-06T12:27:32.315151 #24836]  INFO -- default-win-2012: # to the FileStream not being what is expected. Fixes "The OS handle's
+I, [2018-03-06T12:27:32.332750 #24836]  INFO -- default-win-2012: # position is not what FileStream expected. Do not use a handle
+I, [2018-03-06T12:27:32.358166 #24836]  INFO -- default-win-2012: # simultaneously in one FileStream and in Win32 code or another
+I, [2018-03-06T12:27:32.375760 #24836]  INFO -- default-win-2012: # FileStream."
+I, [2018-03-06T12:27:32.393358 #24836]  INFO -- default-win-2012:     +function Fix-PowerShellOutputRedirectionBug {
+I, [2018-03-06T12:27:32.411932 #24836]  INFO -- default-win-2012:     +  $poshMajorVerion = $PSVersionTable.PSVersion.Major
+I, [2018-03-06T12:27:32.429529 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:32.447124 #24836]  INFO -- default-win-2012:     +  if ($poshMajorVerion -lt 4) {
+I, [2018-03-06T12:27:32.464723 #24836]  INFO -- default-win-2012:     +    try{
+I, [2018-03-06T12:27:32.482319 #24836]  INFO -- default-win-2012:     +      # http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/ plus comments
+I, [2018-03-06T12:27:32.505780 #24836]  INFO -- default-win-2012:     +      $bindingFlags = [Reflection.BindingFlags] "Instance,NonPublic,GetField"
+I, [2018-03-06T12:27:32.526310 #24836]  INFO -- default-win-2012:     +      $objectRef = $host.GetType().GetField("externalHostRef", $bindingFlags).GetValue($host)
+I, [2018-03-06T12:27:32.543906 #24836]  INFO -- default-win-2012:     +      $bindingFlags = [Reflection.BindingFlags] "Instance,NonPublic,GetProperty"
+I, [2018-03-06T12:27:32.561503 #24836]  INFO -- default-win-2012:     +      $consoleHost = $objectRef.GetType().GetProperty("Value", $bindingFlags).GetValue($objectRef, @())
+I, [2018-03-06T12:27:32.579100 #24836]  INFO -- default-win-2012:     +      [void] $consoleHost.GetType().GetProperty("IsStandardOutputRedirected", $bindingFlags).GetValue($consoleHost, @())
+I, [2018-03-06T12:27:32.598652 #24836]  INFO -- default-win-2012:     +      $bindingFlags = [Reflection.BindingFlags] "Instance,NonPublic,GetField"
+I, [2018-03-06T12:27:32.615276 #24836]  INFO -- default-win-2012:     +      $field = $consoleHost.GetType().GetField("standardOutputWriter", $bindingFlags)
+I, [2018-03-06T12:27:32.634822 #24836]  INFO -- default-win-2012:     +      $field.SetValue($consoleHost, [Console]::Out)
+I, [2018-03-06T12:27:32.656329 #24836]  INFO -- default-win-2012:     +      [void] $consoleHost.GetType().GetProperty("IsStandardErrorRedirected", $bindingFlags).GetValue($consoleHost, @())
+I, [2018-03-06T12:27:32.676858 #24836]  INFO -- default-win-2012:     +      $field2 = $consoleHost.GetType().GetField("standardErrorWriter", $bindingFlags)
+I, [2018-03-06T12:27:32.694456 #24836]  INFO -- default-win-2012:     +      $field2.SetValue($consoleHost, [Console]::Error)
+I, [2018-03-06T12:27:32.713028 #24836]  INFO -- default-win-2012:     +    } catch {
+I, [2018-03-06T12:27:32.730627 #24836]  INFO -- default-win-2012:     +      Write-Output "Unable to apply redirection fix."
+I, [2018-03-06T12:27:32.754088 #24836]  INFO -- default-win-2012:     +    }
+I, [2018-03-06T12:27:32.770706 #24836]  INFO -- default-win-2012:     +  }
+I, [2018-03-06T12:27:32.790258 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:32.806879 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:32.826429 #24836]  INFO -- default-win-2012:     +Fix-PowerShellOutputRedirectionBug
+I, [2018-03-06T12:27:32.844027 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:32.862601 #24836]  INFO -- default-win-2012:     +# Attempt to set highest encryption available for SecurityProtocol.
+I, [2018-03-06T12:27:32.879219 #24836]  INFO -- default-win-2012:     +# PowerShell will not set this by default (until maybe .NET 4.6.x). This
+I, [2018-03-06T12:27:32.901706 #24836]  INFO -- default-win-2012:     +# will typically produce a message for PowerShell v2 (just an info
+I, [2018-03-06T12:27:32.919300 #24836]  INFO -- default-win-2012:     +# message though)
+I, [2018-03-06T12:27:32.935920 #24836]  INFO -- default-win-2012:     +try {
+I, [2018-03-06T12:27:32.956449 #24836]  INFO -- default-win-2012:     +  # Set TLS 1.2 (3072), then TLS 1.1 (768), then TLS 1.0 (192), finally SSL 3.0 (48)
+I, [2018-03-06T12:27:32.975025 #24836]  INFO -- default-win-2012:     +  # Use integers because the enumeration values for TLS 1.2 and TLS 1.1 won't
+I, [2018-03-06T12:27:32.992620 #24836]  INFO -- default-win-2012:     +  # exist in .NET 4.0, even though they are addressable if .NET 4.5+ is
+I, [2018-03-06T12:27:33.009240 #24836]  INFO -- default-win-2012:     +  # installed (.NET 4.5 is an in-place upgrade).
+I, [2018-03-06T12:27:33.028791 #24836]  INFO -- default-win-2012:     +  [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor 768 -bor 192 -bor 48
+I, [2018-03-06T12:27:33.047365 #24836]  INFO -- default-win-2012:     +} catch {
+I, [2018-03-06T12:27:33.066918 #24836]  INFO -- default-win-2012:     +  Write-Output 'Unable to set PowerShell to use TLS 1.2 and TLS 1.1 due to old .NET Framework installed. If you see underlying connection closed or trust errors, you may need to do one or more of the following: (1) upgrade to .NET Framework 4.5+ and PowerShell v3, (2) specify internal Chocolatey package location (set $env:chocolateyDownloadUrl prior to install or host the package internally), (3) use the Download + PowerShell method of install. See https://chocolatey.org/install for all install options.'
+I, [2018-03-06T12:27:33.085491 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:33.103087 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.119707 #24836]  INFO -- default-win-2012:     +function Get-Downloader {
+I, [2018-03-06T12:27:33.137304 #24836]  INFO -- default-win-2012:     +param (
+I, [2018-03-06T12:27:33.153921 #24836]  INFO -- default-win-2012:     +  [string]$url
+I, [2018-03-06T12:27:33.171519 #24836]  INFO -- default-win-2012:     + )
+I, [2018-03-06T12:27:33.190092 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.208667 #24836]  INFO -- default-win-2012:     +  $downloader = new-object System.Net.WebClient
+I, [2018-03-06T12:27:33.225286 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.245815 #24836]  INFO -- default-win-2012:     +  $defaultCreds = [System.Net.CredentialCache]::DefaultCredentials
+I, [2018-03-06T12:27:33.262434 #24836]  INFO -- default-win-2012:     +  if ($defaultCreds -ne $null) {
+I, [2018-03-06T12:27:33.279054 #24836]  INFO -- default-win-2012:     +    $downloader.Credentials = $defaultCreds
+I, [2018-03-06T12:27:33.298607 #24836]  INFO -- default-win-2012:     +  }
+I, [2018-03-06T12:27:33.316203 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.332821 #24836]  INFO -- default-win-2012:     +  $ignoreProxy = $env:chocolateyIgnoreProxy
+I, [2018-03-06T12:27:33.351394 #24836]  INFO -- default-win-2012:     +  if ($ignoreProxy -ne $null -and $ignoreProxy -eq 'true') {
+I, [2018-03-06T12:27:33.368015 #24836]  INFO -- default-win-2012:     +    Write-Debug "Explicitly bypassing proxy due to user environment variable"
+I, [2018-03-06T12:27:33.387567 #24836]  INFO -- default-win-2012:     +    $downloader.Proxy = [System.Net.GlobalProxySelection]::GetEmptyWebProxy()
+I, [2018-03-06T12:27:33.406140 #24836]  INFO -- default-win-2012:     +  } else {
+I, [2018-03-06T12:27:33.423736 #24836]  INFO -- default-win-2012:     +    # check if a proxy is required
+I, [2018-03-06T12:27:33.446220 #24836]  INFO -- default-win-2012:     +    $explicitProxy = $env:chocolateyProxyLocation
+I, [2018-03-06T12:27:33.464798 #24836]  INFO -- default-win-2012:     +    $explicitProxyUser = $env:chocolateyProxyUser
+I, [2018-03-06T12:27:33.481415 #24836]  INFO -- default-win-2012:     +    $explicitProxyPassword = $env:chocolateyProxyPassword
+I, [2018-03-06T12:27:33.499011 #24836]  INFO -- default-win-2012:     +    if ($explicitProxy -ne $null -and $explicitProxy -ne '') {
+I, [2018-03-06T12:27:33.517591 #24836]  INFO -- default-win-2012:     +      # explicit proxy
+I, [2018-03-06T12:27:33.538116 #24836]  INFO -- default-win-2012:     +      $proxy = New-Object System.Net.WebProxy($explicitProxy, $true)
+I, [2018-03-06T12:27:33.558645 #24836]  INFO -- default-win-2012:     +      if ($explicitProxyPassword -ne $null -and $explicitProxyPassword -ne '') {
+I, [2018-03-06T12:27:33.577218 #24836]  INFO -- default-win-2012:     +        $passwd = ConvertTo-SecureString $explicitProxyPassword -AsPlainText -Force
+I, [2018-03-06T12:27:33.593837 #24836]  INFO -- default-win-2012:     +        $proxy.Credentials = New-Object System.Management.Automation.PSCredential ($explicitProxyUser, $passwd)
+I, [2018-03-06T12:27:33.611435 #24836]  INFO -- default-win-2012:     +      }
+I, [2018-03-06T12:27:33.630986 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.648582 #24836]  INFO -- default-win-2012:     +      Write-Debug "Using explicit proxy server '$explicitProxy'."
+I, [2018-03-06T12:27:33.666180 #24836]  INFO -- default-win-2012:     +      $downloader.Proxy = $proxy
+I, [2018-03-06T12:27:33.687686 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.705283 #24836]  INFO -- default-win-2012:     +    } elseif (!$downloader.Proxy.IsBypassed($url)) {
+I, [2018-03-06T12:27:33.727768 #24836]  INFO -- default-win-2012:     +      # system proxy (pass through)
+I, [2018-03-06T12:27:33.745363 #24836]  INFO -- default-win-2012:     +      $creds = $defaultCreds
+I, [2018-03-06T12:27:33.761983 #24836]  INFO -- default-win-2012:     +      if ($creds -eq $null) {
+I, [2018-03-06T12:27:33.783490 #24836]  INFO -- default-win-2012:     +        Write-Debug "Default credentials were null. Attempting backup method"
+I, [2018-03-06T12:27:33.801087 #24836]  INFO -- default-win-2012:     +        $cred = get-credential
+I, [2018-03-06T12:27:33.818683 #24836]  INFO -- default-win-2012:     +        $creds = $cred.GetNetworkCredential();
+I, [2018-03-06T12:27:33.841169 #24836]  INFO -- default-win-2012:     +      }
+I, [2018-03-06T12:27:33.858765 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:33.876362 #24836]  INFO -- default-win-2012:     +      $proxyaddress = $downloader.Proxy.GetProxy($url).Authority
+I, [2018-03-06T12:27:33.895912 #24836]  INFO -- default-win-2012:     +      Write-Debug "Using system proxy server '$proxyaddress'."
+I, [2018-03-06T12:27:33.912531 #24836]  INFO -- default-win-2012:     +      $proxy = New-Object System.Net.WebProxy($proxyaddress)
+I, [2018-03-06T12:27:33.931105 #24836]  INFO -- default-win-2012:     +      $proxy.Credentials = $creds
+I, [2018-03-06T12:27:33.947726 #24836]  INFO -- default-win-2012:     +      $downloader.Proxy = $proxy
+I, [2018-03-06T12:27:33.969232 #24836]  INFO -- default-win-2012:     +    }
+I, [2018-03-06T12:27:33.988785 #24836]  INFO -- default-win-2012:     +  }
+I, [2018-03-06T12:27:34.011270 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.029842 #24836]  INFO -- default-win-2012:     +  return $downloader
+I, [2018-03-06T12:27:34.047438 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:34.065035 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.086544 #24836]  INFO -- default-win-2012:     +function Download-String {
+I, [2018-03-06T12:27:34.105119 #24836]  INFO -- default-win-2012:     +param (
+I, [2018-03-06T12:27:34.121736 #24836]  INFO -- default-win-2012:     +  [string]$url
+I, [2018-03-06T12:27:34.139333 #24836]  INFO -- default-win-2012:     + )
+I, [2018-03-06T12:27:34.157908 #24836]  INFO -- default-win-2012:     +  $downloader = Get-Downloader $url
+I, [2018-03-06T12:27:34.177459 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.195056 #24836]  INFO -- default-win-2012:     +  return $downloader.DownloadString($url)
+I, [2018-03-06T12:27:34.212651 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:34.230248 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.247845 #24836]  INFO -- default-win-2012:     +function Download-File {
+I, [2018-03-06T12:27:34.266420 #24836]  INFO -- default-win-2012:     +param (
+I, [2018-03-06T12:27:34.286949 #24836]  INFO -- default-win-2012:     +  [string]$url,
+I, [2018-03-06T12:27:34.304546 #24836]  INFO -- default-win-2012:     +  [string]$file
+I, [2018-03-06T12:27:34.323120 #24836]  INFO -- default-win-2012:     + )
+I, [2018-03-06T12:27:34.344628 #24836]  INFO -- default-win-2012:     +  #Write-Output "Downloading $url to $file"
+I, [2018-03-06T12:27:34.362224 #24836]  INFO -- default-win-2012:     +  $downloader = Get-Downloader $url
+I, [2018-03-06T12:27:34.379821 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.397417 #24836]  INFO -- default-win-2012:     +  $downloader.DownloadFile($url, $file)
+I, [2018-03-06T12:27:34.422834 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:34.442385 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.460961 #24836]  INFO -- default-win-2012:     +if ($url -eq $null -or $url -eq '') {
+I, [2018-03-06T12:27:34.480513 #24836]  INFO -- default-win-2012:     +  Write-Output "Getting latest version of the Chocolatey package for download."
+I, [2018-03-06T12:27:34.499086 #24836]  INFO -- default-win-2012:     +  $url = 'https://chocolatey.org/api/v2/Packages()?$filter=((Id%20eq%20%27chocolatey%27)%20and%20(not%20IsPrerelease))%20and%20IsLatestVersion'
+I, [2018-03-06T12:27:34.517662 #24836]  INFO -- default-win-2012:     +  [xml]$result = Download-String $url
+I, [2018-03-06T12:27:34.538191 #24836]  INFO -- default-win-2012:     +  $url = $result.feed.entry.content.src
+I, [2018-03-06T12:27:34.556764 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:34.576316 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.593914 #24836]  INFO -- default-win-2012:     +# Download the Chocolatey package
+I, [2018-03-06T12:27:34.613465 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.634971 #24836]  INFO -- default-win-2012:     +Write-Output "Getting Chocolatey from $url."
+I, [2018-03-06T12:27:34.652567 #24836]  INFO -- default-win-2012:     +Download-File $url $file
+I, [2018-03-06T12:27:34.675053 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:34.700469 #24836]  INFO -- default-win-2012:     +# Determine unzipping method
+I, [2018-03-06T12:27:34.719043 #24836]  INFO -- default-win-2012:     +# 7zip is the most compatible so use it by default
+I, [2018-03-06T12:27:34.736641 #24836]  INFO -- default-win-2012:     +$7zaExe = Join-Path $tempDir '7za.exe'
+I, [2018-03-06T12:27:34.754237 #24836]  INFO -- default-win-2012:     +$unzipMethod = '7zip'
+I, [2018-03-06T12:27:34.774769 #24836]  INFO -- default-win-2012:     +$useWindowsCompression = $env:chocolateyUseWindowsCompression
+I, [2018-03-06T12:27:34.792363 #24836]  INFO -- default-win-2012:     +if ($useWindowsCompression -ne $null -and $useWindowsCompression -eq 'true') {
+I, [2018-03-06T12:27:34.811914 #24836]  INFO -- default-win-2012:     +  Write-Output 'Using built-in compression to unzip'
+I, [2018-03-06T12:27:34.830490 #24836]  INFO -- default-win-2012:     +  $unzipMethod = 'builtin'
+I, [2018-03-06T12:27:34.849064 #24836]  INFO -- default-win-2012:     +} else {
+I, [2018-03-06T12:27:35.770930 #24836]  INFO -- default-win-2012:     +  Write-Output "Downloading 7-Zip commandline tool prior to extraction."  
+I, [2018-03-06T12:27:35.786572 #24836]  INFO -- default-win-2012:     +  # download 7zip
+I, [2018-03-06T12:27:35.804168 #24836]  INFO -- default-win-2012:     +  Download-File 'https://chocolatey.org/7za.exe' "$7zaExe"
+I, [2018-03-06T12:27:35.820788 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:35.839361 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:35.857935 #24836]  INFO -- default-win-2012:     +#if ($useWindowsCompression -eq $null -or $windowsCompression -eq '') {
+I, [2018-03-06T12:27:35.875531 #24836]  INFO -- default-win-2012:     +#  Write-Output 'Using 7zip to unzip.'
+I, [2018-03-06T12:27:35.901927 #24836]  INFO -- default-win-2012:     +#  Write-Warning "The default is currently 7zip to better handle things like Server Core. This default will be changed to use built-in compression in December 2016. Please make sure if you need to use 7zip that you have adjusted your scripts to set `$env:chocolateyUseWindowsCompression = 'false' prior to calling the install."
+I, [2018-03-06T12:27:35.919527 #24836]  INFO -- default-win-2012:     +#  $unzipMethod = '7zip'
+I, [2018-03-06T12:27:35.939076 #24836]  INFO -- default-win-2012:     +#}
+I, [2018-03-06T12:27:35.966448 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:35.984046 #24836]  INFO -- default-win-2012:     +# unzip the package
+I, [2018-03-06T12:27:36.000665 #24836]  INFO -- default-win-2012:     +Write-Output "Extracting $file to $tempDir..."
+I, [2018-03-06T12:27:36.026081 #24836]  INFO -- default-win-2012:     +if ($unzipMethod -eq '7zip') {
+I, [2018-03-06T12:27:36.044656 #24836]  INFO -- default-win-2012:     +  $params = "x -o`"$tempDir`" -bd -y `"$file`""
+I, [2018-03-06T12:27:36.062251 #24836]  INFO -- default-win-2012:     +  # use more robust Process as compared to Start-Process -Wait (which doesn't
+I, [2018-03-06T12:27:36.080827 #24836]  INFO -- default-win-2012:     +  # wait for the process to finish in PowerShell v3)
+I, [2018-03-06T12:27:36.097446 #24836]  INFO -- default-win-2012:     +  $process = New-Object System.Diagnostics.Process
+I, [2018-03-06T12:27:36.116021 #24836]  INFO -- default-win-2012:     +  $process.StartInfo = New-Object System.Diagnostics.ProcessStartInfo($7zaExe, $params)
+I, [2018-03-06T12:27:36.142414 #24836]  INFO -- default-win-2012:     +  $process.StartInfo.RedirectStandardOutput = $true
+I, [2018-03-06T12:27:36.160988 #24836]  INFO -- default-win-2012:     +  $process.StartInfo.UseShellExecute = $false
+I, [2018-03-06T12:27:36.179562 #24836]  INFO -- default-win-2012:     +  $process.StartInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
+I, [2018-03-06T12:27:36.198136 #24836]  INFO -- default-win-2012:     +  $process.Start() | Out-Null
+I, [2018-03-06T12:27:36.216711 #24836]  INFO -- default-win-2012:     +  $process.BeginOutputReadLine()
+I, [2018-03-06T12:27:36.237241 #24836]  INFO -- default-win-2012:     +  $process.WaitForExit()
+I, [2018-03-06T12:27:36.254837 #24836]  INFO -- default-win-2012:     +  $exitCode = $process.ExitCode
+I, [2018-03-06T12:27:36.272433 #24836]  INFO -- default-win-2012:     +  $process.Dispose()
+I, [2018-03-06T12:27:36.290033 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:36.317402 #24836]  INFO -- default-win-2012:     +  $errorMessage = "Unable to unzip package using 7zip. Perhaps try setting `$env:chocolateyUseWindowsCompression = 'true' and call install again. Error:"
+I, [2018-03-06T12:27:36.334022 #24836]  INFO -- default-win-2012:     +  switch ($exitCode) {
+I, [2018-03-06T12:27:36.351619 #24836]  INFO -- default-win-2012:     +    0 { break }
+I, [2018-03-06T12:27:36.368238 #24836]  INFO -- default-win-2012:     +    1 { throw "$errorMessage Some files could not be extracted" }
+I, [2018-03-06T12:27:36.387789 #24836]  INFO -- default-win-2012:     +    2 { throw "$errorMessage 7-Zip encountered a fatal error while extracting the files" }
+I, [2018-03-06T12:27:36.405387 #24836]  INFO -- default-win-2012:     +    7 { throw "$errorMessage 7-Zip command line error" }
+I, [2018-03-06T12:27:36.422006 #24836]  INFO -- default-win-2012:     +    8 { throw "$errorMessage 7-Zip out of memory" }
+I, [2018-03-06T12:27:36.448399 #24836]  INFO -- default-win-2012:     +    255 { throw "$errorMessage Extraction cancelled by the user" }
+I, [2018-03-06T12:27:36.467953 #24836]  INFO -- default-win-2012:     +    default { throw "$errorMessage 7-Zip signalled an unknown error (code $exitCode)" }
+I, [2018-03-06T12:27:36.490438 #24836]  INFO -- default-win-2012:     +  }
+I, [2018-03-06T12:27:36.512922 #24836]  INFO -- default-win-2012:     +} else {
+I, [2018-03-06T12:27:36.531494 #24836]  INFO -- default-win-2012:     +  if ($PSVersionTable.PSVersion.Major -lt 5) {
+I, [2018-03-06T12:27:36.550071 #24836]  INFO -- default-win-2012:     +    try {
+I, [2018-03-06T12:27:36.567667 #24836]  INFO -- default-win-2012:     +      $shellApplication = new-object -com shell.application
+I, [2018-03-06T12:27:36.585262 #24836]  INFO -- default-win-2012:     +      $zipPackage = $shellApplication.NameSpace($file)
+I, [2018-03-06T12:27:36.606770 #24836]  INFO -- default-win-2012:     +      $destinationFolder = $shellApplication.NameSpace($tempDir)
+I, [2018-03-06T12:27:36.629253 #24836]  INFO -- default-win-2012:     +      $destinationFolder.CopyHere($zipPackage.Items(),0x10)
+I, [2018-03-06T12:27:36.646850 #24836]  INFO -- default-win-2012:     +    } catch {
+I, [2018-03-06T12:27:36.666402 #24836]  INFO -- default-win-2012:     +      throw "Unable to unzip package using built-in compression. Set `$env:chocolateyUseWindowsCompression = 'false' and call install again to use 7zip to unzip. Error: `n $_"
+I, [2018-03-06T12:27:36.684000 #24836]  INFO -- default-win-2012:     +    }
+I, [2018-03-06T12:27:36.700618 #24836]  INFO -- default-win-2012:     +  } else {
+I, [2018-03-06T12:27:36.718215 #24836]  INFO -- default-win-2012:     +    Expand-Archive -Path "$file" -DestinationPath "$tempDir" -Force
+I, [2018-03-06T12:27:36.734835 #24836]  INFO -- default-win-2012:     +  }
+I, [2018-03-06T12:27:36.760252 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:36.776871 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:36.796422 #24836]  INFO -- default-win-2012:     +# Call chocolatey install
+I, [2018-03-06T12:27:36.813041 #24836]  INFO -- default-win-2012:     +Write-Output "Installing chocolatey on this machine"
+I, [2018-03-06T12:27:36.829660 #24836]  INFO -- default-win-2012:     +$toolsFolder = Join-Path $tempDir "tools"
+I, [2018-03-06T12:27:36.849211 #24836]  INFO -- default-win-2012:     +$chocInstallPS1 = Join-Path $toolsFolder "chocolateyInstall.ps1"
+I, [2018-03-06T12:27:36.866808 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:36.895160 #24836]  INFO -- default-win-2012:     +& $chocInstallPS1
+I, [2018-03-06T12:27:36.913733 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:36.930351 #24836]  INFO -- default-win-2012:     +Write-Output 'Ensuring chocolatey commands are on the path'
+I, [2018-03-06T12:27:36.948925 #24836]  INFO -- default-win-2012:     +$chocInstallVariableName = "ChocolateyInstall"
+I, [2018-03-06T12:27:36.967499 #24836]  INFO -- default-win-2012:     +$chocoPath = [Environment]::GetEnvironmentVariable($chocInstallVariableName)
+I, [2018-03-06T12:27:36.984121 #24836]  INFO -- default-win-2012:     +if ($chocoPath -eq $null -or $chocoPath -eq '') {
+I, [2018-03-06T12:27:37.000738 #24836]  INFO -- default-win-2012:     +  $chocoPath = 'C:\ProgramData\Chocolatey'
+I, [2018-03-06T12:27:37.023223 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:37.040819 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:37.061351 #24836]  INFO -- default-win-2012:     +$chocoExePath = Join-Path $chocoPath 'bin'
+I, [2018-03-06T12:27:37.078946 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:37.096542 #24836]  INFO -- default-win-2012:     +if ($($env:Path).ToLower().Contains($($chocoExePath).ToLower()) -eq $false) {
+I, [2018-03-06T12:27:37.115117 #24836]  INFO -- default-win-2012:     +  $env:Path = [Environment]::GetEnvironmentVariable('Path',[System.EnvironmentVariableTarget]::Machine);
+I, [2018-03-06T12:27:37.131736 #24836]  INFO -- default-win-2012:     +}
+I, [2018-03-06T12:27:37.149333 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:37.168884 #24836]  INFO -- default-win-2012:     +Write-Output 'Ensuring chocolatey.nupkg is in the lib folder'
+I, [2018-03-06T12:27:37.193323 #24836]  INFO -- default-win-2012:     +$chocoPkgDir = Join-Path $chocoPath 'lib\chocolatey'
+I, [2018-03-06T12:27:37.210921 #24836]  INFO -- default-win-2012:     +$nupkg = Join-Path $chocoPkgDir 'chocolatey.nupkg'
+I, [2018-03-06T12:27:37.230473 #24836]  INFO -- default-win-2012:     +if (![System.IO.Directory]::Exists($chocoPkgDir)) { [System.IO.Directory]::CreateDirectory($chocoPkgDir); }
+I, [2018-03-06T12:27:37.248070 #24836]  INFO -- default-win-2012:     +Copy-Item "$file" "$nupkg" -Force -ErrorAction SilentlyContinue
+I, [2018-03-06T12:27:37.265664 #24836]  INFO -- default-win-2012:     +
+I, [2018-03-06T12:27:37.282285 #24836]  INFO -- default-win-2012:     +# SIG # Begin signature block
+I, [2018-03-06T12:27:37.300859 #24836]  INFO -- default-win-2012:     +# MIINWwYJKoZIhvcNAQcCoIINTDCCDUgCAQExDzANBglghkgBZQMEAgEFADB5Bgor
+I, [2018-03-06T12:27:37.320410 #24836]  INFO -- default-win-2012:     +# BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
+I, [2018-03-06T12:27:37.338007 #24836]  INFO -- default-win-2012:     +# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBlBAdKza9HJh5y
+I, [2018-03-06T12:27:37.355605 #24836]  INFO -- default-win-2012:     +# SStdXAQqtPBJqqekYVu4kBAl52mATaCCCngwggUwMIIEGKADAgECAhAECRgbX9W7
+I, [2018-03-06T12:27:37.372222 #24836]  INFO -- default-win-2012:     +# ZnVTQ7VvlVAIMA0GCSqGSIb3DQEBCwUAMGUxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+I, [2018-03-06T12:27:37.390796 #24836]  INFO -- default-win-2012:     +# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xJDAiBgNV
+I, [2018-03-06T12:27:37.411326 #24836]  INFO -- default-win-2012:     +# BAMTG0RpZ2lDZXJ0IEFzc3VyZWQgSUQgUm9vdCBDQTAeFw0xMzEwMjIxMjAwMDBa
+I, [2018-03-06T12:27:37.428922 #24836]  INFO -- default-win-2012:     +# Fw0yODEwMjIxMjAwMDBaMHIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2Vy
+I, [2018-03-06T12:27:37.448475 #24836]  INFO -- default-win-2012:     +# dCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xMTAvBgNVBAMTKERpZ2lD
+I, [2018-03-06T12:27:37.467048 #24836]  INFO -- default-win-2012:     +# ZXJ0IFNIQTIgQXNzdXJlZCBJRCBDb2RlIFNpZ25pbmcgQ0EwggEiMA0GCSqGSIb3
+I, [2018-03-06T12:27:37.486600 #24836]  INFO -- default-win-2012:     +# DQEBAQUAA4IBDwAwggEKAoIBAQD407Mcfw4Rr2d3B9MLMUkZz9D7RZmxOttE9X/l
+I, [2018-03-06T12:27:37.505175 #24836]  INFO -- default-win-2012:     +# qJ3bMtdx6nadBS63j/qSQ8Cl+YnUNxnXtqrwnIal2CWsDnkoOn7p0WfTxvspJ8fT
+I, [2018-03-06T12:27:37.522771 #24836]  INFO -- default-win-2012:     +# eyOU5JEjlpB3gvmhhCNmElQzUHSxKCa7JGnCwlLyFGeKiUXULaGj6YgsIJWuHEqH
+I, [2018-03-06T12:27:37.540367 #24836]  INFO -- default-win-2012:     +# CN8M9eJNYBi+qsSyrnAxZjNxPqxwoqvOf+l8y5Kh5TsxHM/q8grkV7tKtel05iv+
+I, [2018-03-06T12:27:37.561876 #24836]  INFO -- default-win-2012:     +# bMt+dDk2DZDv5LVOpKnqagqrhPOsZ061xPeM0SAlI+sIZD5SlsHyDxL0xY4PwaLo
+I, [2018-03-06T12:27:37.580448 #24836]  INFO -- default-win-2012:     +# LFH3c7y9hbFig3NBggfkOItqcyDQD2RzPJ6fpjOp/RnfJZPRAgMBAAGjggHNMIIB
+I, [2018-03-06T12:27:37.600000 #24836]  INFO -- default-win-2012:     +# yTASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBhjATBgNVHSUEDDAK
+I, [2018-03-06T12:27:37.616620 #24836]  INFO -- default-win-2012:     +# BggrBgEFBQcDAzB5BggrBgEFBQcBAQRtMGswJAYIKwYBBQUHMAGGGGh0dHA6Ly9v
+I, [2018-03-06T12:27:37.638126 #24836]  INFO -- default-win-2012:     +# Y3NwLmRpZ2ljZXJ0LmNvbTBDBggrBgEFBQcwAoY3aHR0cDovL2NhY2VydHMuZGln
+I, [2018-03-06T12:27:37.655725 #24836]  INFO -- default-win-2012:     +# aWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEUm9vdENBLmNydDCBgQYDVR0fBHow
+I, [2018-03-06T12:27:37.673321 #24836]  INFO -- default-win-2012:     +# eDA6oDigNoY0aHR0cDovL2NybDQuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJl
+I, [2018-03-06T12:27:37.689940 #24836]  INFO -- default-win-2012:     +# ZElEUm9vdENBLmNybDA6oDigNoY0aHR0cDovL2NybDMuZGlnaWNlcnQuY29tL0Rp
+I, [2018-03-06T12:27:37.709491 #24836]  INFO -- default-win-2012:     +# Z2lDZXJ0QXNzdXJlZElEUm9vdENBLmNybDBPBgNVHSAESDBGMDgGCmCGSAGG/WwA
+I, [2018-03-06T12:27:37.730998 #24836]  INFO -- default-win-2012:     +# AgQwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAK
+I, [2018-03-06T12:27:37.747618 #24836]  INFO -- default-win-2012:     +# BghghkgBhv1sAzAdBgNVHQ4EFgQUWsS5eyoKo6XqcQPAYPkt9mV1DlgwHwYDVR0j
+I, [2018-03-06T12:27:37.766191 #24836]  INFO -- default-win-2012:     +# BBgwFoAUReuir/SSy4IxLVGLp6chnfNtyA8wDQYJKoZIhvcNAQELBQADggEBAD7s
+I, [2018-03-06T12:27:37.783787 #24836]  INFO -- default-win-2012:     +# DVoks/Mi0RXILHwlKXaoHV0cLToaxO8wYdd+C2D9wz0PxK+L/e8q3yBVN7Dh9tGS
+I, [2018-03-06T12:27:37.800408 #24836]  INFO -- default-win-2012:     +# dQ9RtG6ljlriXiSBThCk7j9xjmMOE0ut119EefM2FAaK95xGTlz/kLEbBw6RFfu6
+I, [2018-03-06T12:27:37.820937 #24836]  INFO -- default-win-2012:     +# r7VRwo0kriTGxycqoSkoGjpxKAI8LpGjwCUR4pwUR6F6aGivm6dcIFzZcbEMj7uo
+I, [2018-03-06T12:27:37.838532 #24836]  INFO -- default-win-2012:     +# +MUSaJ/PQMtARKUT8OZkDCUIQjKyNookAv4vcn4c10lFluhZHen6dGRrsutmQ9qz
+I, [2018-03-06T12:27:37.854176 #24836]  INFO -- default-win-2012:     +# sIzV6Q3d9gEgzpkxYz0IGhizgZtPxpMQBvwHgfqL2vmCSfdibqFT+hKUGIUukpHq
+I, [2018-03-06T12:27:37.873727 #24836]  INFO -- default-win-2012:     +# aGxEMrJmoecYpJpkUe8wggVAMIIEKKADAgECAhAHdGbtomdvOuySF9IwU3EQMA0G
+I, [2018-03-06T12:27:37.890344 #24836]  INFO -- default-win-2012:     +# CSqGSIb3DQEBCwUAMHIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJ
+I, [2018-03-06T12:27:37.906963 #24836]  INFO -- default-win-2012:     +# bmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xMTAvBgNVBAMTKERpZ2lDZXJ0
+I, [2018-03-06T12:27:37.924562 #24836]  INFO -- default-win-2012:     +# IFNIQTIgQXNzdXJlZCBJRCBDb2RlIFNpZ25pbmcgQ0EwHhcNMTYwMzI0MDAwMDAw
+I, [2018-03-06T12:27:37.942158 #24836]  INFO -- default-win-2012:     +# WhcNMTcwMzI4MTIwMDAwWjB9MQswCQYDVQQGEwJVUzEPMA0GA1UECBMGS2Fuc2Fz
+I, [2018-03-06T12:27:37.961708 #24836]  INFO -- default-win-2012:     +# MQ8wDQYDVQQHEwZUb3Bla2ExJTAjBgNVBAoTHFJlYWxEaW1lbnNpb25zIFNvZnR3
+I, [2018-03-06T12:27:37.978328 #24836]  INFO -- default-win-2012:     +# YXJlLCBMTEMxJTAjBgNVBAMTHFJlYWxEaW1lbnNpb25zIFNvZnR3YXJlLCBMTEMw
+I, [2018-03-06T12:27:37.997880 #24836]  INFO -- default-win-2012:     +# ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC52YS2WKUpBtdkDyJ3G0Qm
+I, [2018-03-06T12:27:38.014499 #24836]  INFO -- default-win-2012:     +# 42v+W+yqr7DediVzIeCjHpKNkmmxO8+lS+nniFDjoFGO1JG/G3ZywVRFlM1LKHeP
+I, [2018-03-06T12:27:38.032095 #24836]  INFO -- default-win-2012:     +# M1eON6wT0H1gvhxpMzyuC/SRW9wvMtTlvHnjdTLW06Oe9tvGkQkTM8rbzwRDIZ9o
+I, [2018-03-06T12:27:38.049692 #24836]  INFO -- default-win-2012:     +# ddT8BxHSOmGelrAN9CwKf60ziw8jKLZnuAuZwSgkX5K7wvOs8viqydlnt7z3Wyim
+I, [2018-03-06T12:27:38.067289 #24836]  INFO -- default-win-2012:     +# L+wjue85Mpa7jyjIfnUqssN1qz4nce+e89CxTD2AbWjGwnfTcTgmj3EUSJRQgDRk
+I, [2018-03-06T12:27:38.083907 #24836]  INFO -- default-win-2012:     +# J+O/sVzS/V76xajLoPvI4ZlAsMpeK3ptLYqviU3ZaNUzLQWFjuWqc3fhjbWDFF51
+I, [2018-03-06T12:27:38.101504 #24836]  INFO -- default-win-2012:     +# AgMBAAGjggHFMIIBwTAfBgNVHSMEGDAWgBRaxLl7KgqjpepxA8Bg+S32ZXUOWDAd
+I, [2018-03-06T12:27:38.119101 #24836]  INFO -- default-win-2012:     +# BgNVHQ4EFgQUT0GgvxvwrOqMjXQ8yw7QDagIVJ4wDgYDVR0PAQH/BAQDAgeAMBMG
+I, [2018-03-06T12:27:38.137674 #24836]  INFO -- default-win-2012:     +# A1UdJQQMMAoGCCsGAQUFBwMDMHcGA1UdHwRwMG4wNaAzoDGGL2h0dHA6Ly9jcmwz
+I, [2018-03-06T12:27:38.155272 #24836]  INFO -- default-win-2012:     +# LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMDWgM6Axhi9odHRw
+I, [2018-03-06T12:27:38.174823 #24836]  INFO -- default-win-2012:     +# Oi8vY3JsNC5kaWdpY2VydC5jb20vc2hhMi1hc3N1cmVkLWNzLWcxLmNybDBMBgNV
+I, [2018-03-06T12:27:38.191443 #24836]  INFO -- default-win-2012:     +# HSAERTBDMDcGCWCGSAGG/WwDATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k
+I, [2018-03-06T12:27:38.209039 #24836]  INFO -- default-win-2012:     +# aWdpY2VydC5jb20vQ1BTMAgGBmeBDAEEATCBhAYIKwYBBQUHAQEEeDB2MCQGCCsG
+I, [2018-03-06T12:27:38.229570 #24836]  INFO -- default-win-2012:     +# AQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wTgYIKwYBBQUHMAKGQmh0
+I, [2018-03-06T12:27:38.247165 #24836]  INFO -- default-win-2012:     +# dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJBc3N1cmVkSURD
+I, [2018-03-06T12:27:38.264762 #24836]  INFO -- default-win-2012:     +# b2RlU2lnbmluZ0NBLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBCwUAA4IB
+I, [2018-03-06T12:27:38.282359 #24836]  INFO -- default-win-2012:     +# AQAD6K2ldfDx7hOZxW6smYkiV4lxXY4bewxGv/gh2hjWgLiQ/sornz2fHDni/kOf
+I, [2018-03-06T12:27:38.299955 #24836]  INFO -- default-win-2012:     +# qhn8/3KvYd4V33QqMqjm/qsRpwjj9NC/Q2BGuTg0ax3e/Z9ZIvcYB4xx8CRbGKse
+I, [2018-03-06T12:27:38.316574 #24836]  INFO -- default-win-2012:     +# R9lixgMAJZMCWyGzAC/E3XX+BX3B6y8N5zBIKRY1M7xub+LM7zW9LGMhX3e56J7G
+I, [2018-03-06T12:27:38.335149 #24836]  INFO -- default-win-2012:     +# UF7zIzQ7ZkaJzfxFbVvEz2/KNoNGiCmA7Y0biMXpX9730Dbg4Z+B4SUe4k4WPLS/
+I, [2018-03-06T12:27:38.351768 #24836]  INFO -- default-win-2012:     +# 3goAq8lVMFtoqShvyvrmYtj2gFjQmH3BzSCSRZrAFbWYDCga57Fq7A4xrF2i67kG
+I, [2018-03-06T12:27:38.368387 #24836]  INFO -- default-win-2012:     +# oljzeP+/35wuoOlrggn2EuJ1MYICOTCCAjUCAQEwgYYwcjELMAkGA1UEBhMCVVMx
+I, [2018-03-06T12:27:38.386961 #24836]  INFO -- default-win-2012:     +# FTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNv
+I, [2018-03-06T12:27:38.403579 #24836]  INFO -- default-win-2012:     +# bTExMC8GA1UEAxMoRGlnaUNlcnQgU0hBMiBBc3N1cmVkIElEIENvZGUgU2lnbmlu
+I, [2018-03-06T12:27:38.425087 #24836]  INFO -- default-win-2012:     +# ZyBDQQIQB3Rm7aJnbzrskhfSMFNxEDANBglghkgBZQMEAgEFAKCBhDAYBgorBgEE
+I, [2018-03-06T12:27:38.442683 #24836]  INFO -- default-win-2012:     +# AYI3AgEMMQowCKACgAChAoAAMBkGCSqGSIb3DQEJAzEMBgorBgEEAYI3AgEEMBwG
+I, [2018-03-06T12:27:38.460280 #24836]  INFO -- default-win-2012:     +# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMC8GCSqGSIb3DQEJBDEiBCB/OBR9
+I, [2018-03-06T12:27:38.478855 #24836]  INFO -- default-win-2012:     +# 5mBzWjK5lvv+fJ/LFvbGgZexonMYOEcyibSwfDANBgkqhkiG9w0BAQEFAASCAQAQ
+I, [2018-03-06T12:27:38.497430 #24836]  INFO -- default-win-2012:     +# P9ixZZf+KMWo2HW7Tn7VwiEVBXGQC4IrUvq984RHXRiuLVP5NPfPj/7KinAsgauw
+I, [2018-03-06T12:27:38.515025 #24836]  INFO -- default-win-2012:     +# pkCQQcOBhNMG+BQUhyIpE0C8VCcrwU95k+C00XQrPSAAwdMliunwneW4PCST9/GV
+I, [2018-03-06T12:27:38.530666 #24836]  INFO -- default-win-2012:     +# 5vCmNBSqAMC07WUlESw8rItTO+eHifng3PydrYMrWck1Sb9SxG9NJ6h10OmLTuhf
+I, [2018-03-06T12:27:38.550218 #24836]  INFO -- default-win-2012:     +# 5a4yn/yymjcJZg9mJdo6Wpg9tXVrQLYVLc0OrkgjEJdjpBm4jYzmM/YySFm4F/if
+I, [2018-03-06T12:27:38.567815 #24836]  INFO -- default-win-2012:     +# yXmi9q0L9H9NWbOi1b/eDb2gJFREPoUZC0FOYP1qDy7DW/LCYeviawv2sJk2kcBX
+I, [2018-03-06T12:27:38.584434 #24836]  INFO -- default-win-2012:     +# pzyAIMKTmS0n4FWRXJfh
+I, [2018-03-06T12:27:38.602029 #24836]  INFO -- default-win-2012:     +# SIG # End signature block
+I, [2018-03-06T12:27:38.618650 #24836]  INFO -- default-win-2012:   * powershell_script[Install Chocolatey] action run
+I, [2018-03-06T12:27:38.638202 #24836]  INFO -- default-win-2012:     [execute] WARNING: It's very likely you will need to close and reopen your shell 
+I, [2018-03-06T12:27:38.654820 #24836]  INFO -- default-win-2012:          before you can use choco.
+I, [2018-03-06T12:27:38.671442 #24836]  INFO -- default-win-2012:        WARNING: You can safely ignore errors related to missing log files when 
+I, [2018-03-06T12:27:38.690013 #24836]  INFO -- default-win-2012:          upgrading from a version of Chocolatey less than 0.9.9. 
+I, [2018-03-06T12:27:38.706634 #24836]  INFO -- default-win-2012:          'Batch file could not be found' is also safe to ignore. 
+I, [2018-03-06T12:27:38.727163 #24836]  INFO -- default-win-2012:          'The system cannot find the file specified' - also safe.
+I, [2018-03-06T12:27:38.746714 #24836]  INFO -- default-win-2012:        WARNING: Not setting tab completion: Profile file does not exist at 
+I, [2018-03-06T12:27:38.764310 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.782883 #24836]  INFO -- default-win-2012:        'C:\Users\vagrant\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1'
+I, [2018-03-06T12:27:38.799504 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.818077 #24836]  INFO -- default-win-2012:        .
+I, [2018-03-06T12:27:38.834697 #24836]  INFO -- default-win-2012:        Downloading Chocolatey from : https://chocolatey.org/api/v2/package/chocolatey
+I, [2018-03-06T12:27:38.853272 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.872824 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.891397 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.908994 #24836]  INFO -- default-win-2012:        Mode                LastWriteTime     Length Name                              
+I, [2018-03-06T12:27:38.926591 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.944187 #24836]  INFO -- default-win-2012:        ----                -------------     ------ ----                              
+I, [2018-03-06T12:27:38.962762 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:38.984268 #24836]  INFO -- default-win-2012:        d----          3/6/2018  12:27 PM            chocInstall                       
+I, [2018-03-06T12:27:39.002842 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.021416 #24836]  INFO -- default-win-2012:        Getting Chocolatey from https://chocolatey.org/api/v2/package/chocolatey.
+I, [2018-03-06T12:27:39.039015 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.064430 #24836]  INFO -- default-win-2012:        Downloading 7-Zip commandline tool prior to extraction.
+I, [2018-03-06T12:27:39.082028 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.099623 #24836]  INFO -- default-win-2012:        Extracting C:\Users\vagrant\AppData\Local\Temp\chocolatey\chocInstall\chocolatey.zip to C:\Users\vagrant\AppData\Local\Temp\chocolatey\chocInstall...
+I, [2018-03-06T12:27:39.116244 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.133839 #24836]  INFO -- default-win-2012:        Installing chocolatey on this machine
+I, [2018-03-06T12:27:39.151437 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.167078 #24836]  INFO -- default-win-2012:        Creating ChocolateyInstall as an environment variable (targeting 'Machine') 
+I, [2018-03-06T12:27:39.184674 #24836]  INFO -- default-win-2012:          Setting ChocolateyInstall to 'C:\ProgramData\chocolatey'
+I, [2018-03-06T12:27:39.203250 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.221822 #24836]  INFO -- default-win-2012:        Restricting write permissions to Administrators
+I, [2018-03-06T12:27:39.240396 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.257016 #24836]  INFO -- default-win-2012:        We are setting up the Chocolatey package repository.
+I, [2018-03-06T12:27:39.274613 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.291232 #24836]  INFO -- default-win-2012:        The packages themselves go to 'C:\ProgramData\chocolatey\lib'
+I, [2018-03-06T12:27:39.307850 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.326424 #24836]  INFO -- default-win-2012:          (i.e. C:\ProgramData\chocolatey\lib\yourPackageName).
+I, [2018-03-06T12:27:39.343044 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.360640 #24836]  INFO -- default-win-2012:        A shim file for the command line goes to 'C:\ProgramData\chocolatey\bin'
+I, [2018-03-06T12:27:39.378237 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.394856 #24836]  INFO -- default-win-2012:          and points to an executable in 'C:\ProgramData\chocolatey\lib\yourPackageName'.
+I, [2018-03-06T12:27:39.413429 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:39.431028 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.086989 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.103609 #24836]  INFO -- default-win-2012:        Creating Chocolatey folders if they do not already exist.
+I, [2018-03-06T12:27:40.120227 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.142712 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.159332 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.177905 #24836]  INFO -- default-win-2012:        Chocolatey (choco.exe) is now ready.
+I, [2018-03-06T12:27:40.194523 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.211144 #24836]  INFO -- default-win-2012:        You can call choco from anywhere, command line or powershell by typing choco.
+I, [2018-03-06T12:27:40.228739 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.245359 #24836]  INFO -- default-win-2012:        Run choco /? for a list of functions.
+I, [2018-03-06T12:27:40.265889 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.290329 #24836]  INFO -- default-win-2012:        You may need to shut down and restart powershell and/or consoles
+I, [2018-03-06T12:27:40.306947 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.323566 #24836]  INFO -- default-win-2012:         first prior to using choco.
+I, [2018-03-06T12:27:40.340186 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.357781 #24836]  INFO -- default-win-2012:        Ensuring chocolatey commands are on the path
+I, [2018-03-06T12:27:40.375379 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.393952 #24836]  INFO -- default-win-2012:        Ensuring chocolatey.nupkg is in the lib folder
+I, [2018-03-06T12:27:40.412526 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.430124 #24836]  INFO -- default-win-2012:     - execute "C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NonInteractive -NoProfile -ExecutionPolicy Bypass -InputFormat None -File "C:/Users/vagrant/AppData/Local/Temp/chef-script20180306-696-1qdyl7.ps1"
+I, [2018-03-06T12:27:40.451630 #24836]  INFO -- default-win-2012: Recipe: initialise_windows::chrome
+I, [2018-03-06T12:27:40.469228 #24836]  INFO -- default-win-2012:   * chocolatey[googlechrome] action install
+I, [2018-03-06T12:27:40.485847 #24836]  INFO -- default-win-2012:     * execute[install package googlechrome] action run
+I, [2018-03-06T12:27:40.502464 #24836]  INFO -- default-win-2012:       [execute] Chocolatey v0.10.8
+I, [2018-03-06T12:27:40.521038 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.538639 #24836]  INFO -- default-win-2012:          Installing the following packages:
+I, [2018-03-06T12:27:40.555255 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.574806 #24836]  INFO -- default-win-2012:          googlechrome
+I, [2018-03-06T12:27:40.590450 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.608045 #24836]  INFO -- default-win-2012:          By installing you accept licenses for the packages.
+I, [2018-03-06T12:27:40.626618 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.652035 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.669633 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 5%
+I, [2018-03-06T12:27:40.687230 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 15%
+I, [2018-03-06T12:27:40.708739 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 26%
+I, [2018-03-06T12:27:40.728288 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 37%
+I, [2018-03-06T12:27:40.744908 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 48%
+I, [2018-03-06T12:27:40.761526 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 58%
+I, [2018-03-06T12:27:40.783033 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 69%
+I, [2018-03-06T12:27:40.800631 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 80%
+I, [2018-03-06T12:27:40.818226 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 90%
+I, [2018-03-06T12:27:40.835824 #24836]  INFO -- default-win-2012: Progress: Downloading chocolatey-core.extension 1.3.3... 100%
+I, [2018-03-06T12:27:40.855374 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.872972 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:40.890570 #24836]  INFO -- default-win-2012: Progress: Downloading GoogleChrome 64.0.3282.18600... 13%
+I, [2018-03-06T12:27:40.908166 #24836]  INFO -- default-win-2012: Progress: Downloading GoogleChrome 64.0.3282.18600... 39%
+I, [2018-03-06T12:27:40.924783 #24836]  INFO -- default-win-2012: Progress: Downloading GoogleChrome 64.0.3282.18600... 66%
+I, [2018-03-06T12:27:40.943359 #24836]  INFO -- default-win-2012: Progress: Downloading GoogleChrome 64.0.3282.18600... 93%
+I, [2018-03-06T12:27:40.961932 #24836]  INFO -- default-win-2012: Progress: Downloading GoogleChrome 64.0.3282.18600... 100%
+I, [2018-03-06T12:27:40.979528 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.006903 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.024498 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.042095 #24836]  INFO -- default-win-2012:          chocolatey-core.extension v1.3.3 [Approved]
+I, [2018-03-06T12:27:41.062625 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.082178 #24836]  INFO -- default-win-2012:          chocolatey-core.extension package files install completed. Performing other installation steps.
+I, [2018-03-06T12:27:41.100750 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.712721 #24836]  INFO -- default-win-2012:           Installed/updated chocolatey-core extensions.
+I, [2018-03-06T12:27:41.727386 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.744981 #24836]  INFO -- default-win-2012:           The install of chocolatey-core.extension was successful.
+I, [2018-03-06T12:27:41.762579 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.782131 #24836]  INFO -- default-win-2012:            Software installed to 'C:\ProgramData\chocolatey\extensions\chocolatey-core'
+I, [2018-03-06T12:27:41.799727 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.828077 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.847628 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.865225 #24836]  INFO -- default-win-2012:          GoogleChrome v64.0.3282.18600 [Approved]
+I, [2018-03-06T12:27:41.882823 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:41.900419 #24836]  INFO -- default-win-2012:          googlechrome package files install completed. Performing other installation steps.
+I, [2018-03-06T12:27:41.918014 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:44.711967 #24836]  INFO -- default-win-2012:          Downloading googlechrome 64 bit
+I, [2018-03-06T12:27:44.731520 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:44.749121 #24836]  INFO -- default-win-2012:            from 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'
+I, [2018-03-06T12:27:44.770623 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:44.788218 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:44.810703 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 13.2 KB of 48.14 MB
+I, [2018-03-06T12:27:44.834165 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 26.46 KB of 48.14 MB
+I, [2018-03-06T12:27:44.853718 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 38.84 KB of 48.14 MB
+I, [2018-03-06T12:27:44.871314 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 52.1 KB of 48.14 MB
+I, [2018-03-06T12:27:44.892822 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 65.37 KB of 48.14 MB
+I, [2018-03-06T12:27:44.909440 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 79.05 KB of 48.14 MB
+I, [2018-03-06T12:27:44.927043 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 92.31 KB of 48.14 MB
+I, [2018-03-06T12:27:44.945611 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 105.58 KB of 48.14 MB
+I, [2018-03-06T12:27:44.964185 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 118.84 KB of 48.14 MB
+I, [2018-03-06T12:27:44.990580 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 132.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.012088 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 145.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.032616 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 159.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.052169 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 172.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.070743 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 185.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.091272 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 198.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.111800 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 212.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.128420 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 225.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.147972 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 239.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.168502 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 252.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.190008 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 265.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.207606 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 278.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.225203 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 292.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.245730 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 305.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.263327 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 319.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.279947 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 332.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.300475 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 345.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.319050 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 358.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.339581 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 372.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.364020 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 385.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.381615 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 399.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.399214 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 412.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.419743 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 425.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.438317 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 438.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.456889 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 452.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.473509 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 465.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.494039 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 479.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.513591 #24836]  INFO -- default-win-2012: Progress: 0% - Saving 492.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.531186 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 505.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.550739 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 518.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.570291 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 532.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.591799 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 545.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.608416 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 559.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.625035 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 572.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.645566 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 585.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.664138 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 598.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.681735 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 612.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.700310 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 625.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.721818 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 639.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.741370 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 652.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.764832 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 665.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.781450 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 678.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.799048 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 692.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.817622 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 705.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.835218 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 719.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.857701 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 732.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.876276 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 745.58 KB of 48.14 MB
+I, [2018-03-06T12:27:45.893874 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 758.84 KB of 48.14 MB
+I, [2018-03-06T12:27:45.916359 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 772.1 KB of 48.14 MB
+I, [2018-03-06T12:27:45.936888 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 785.37 KB of 48.14 MB
+I, [2018-03-06T12:27:45.958395 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 799.05 KB of 48.14 MB
+I, [2018-03-06T12:27:45.975013 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 812.31 KB of 48.14 MB
+I, [2018-03-06T12:27:45.991632 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 825.58 KB of 48.14 MB
+I, [2018-03-06T12:27:46.009229 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 838.84 KB of 48.14 MB
+I, [2018-03-06T12:27:46.029759 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 852.1 KB of 48.14 MB
+I, [2018-03-06T12:27:46.050287 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 865.37 KB of 48.14 MB
+I, [2018-03-06T12:27:46.067883 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 879.05 KB of 48.14 MB
+I, [2018-03-06T12:27:46.085480 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 892.31 KB of 48.14 MB
+I, [2018-03-06T12:27:46.106016 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 905.58 KB of 48.14 MB
+I, [2018-03-06T12:27:46.123607 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 918.84 KB of 48.14 MB
+I, [2018-03-06T12:27:46.142182 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 932.1 KB of 48.14 MB
+I, [2018-03-06T12:27:46.158800 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 945.37 KB of 48.14 MB
+I, [2018-03-06T12:27:46.178352 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 959.05 KB of 48.14 MB
+I, [2018-03-06T12:27:46.196925 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 972.31 KB of 48.14 MB
+I, [2018-03-06T12:27:46.214523 #24836]  INFO -- default-win-2012: Progress: 1% - Saving 985.58 KB of 48.14 MB
+I, [2018-03-06T12:27:46.237007 #24836]  INFO -- default-win-2012: Progress: 2% - Saving 998.84 KB of 48.14 MB
+I, [2018-03-06T12:27:46.258516 #24836]  INFO -- default-win-2012: Progress: 2% - Saving 1012.1 KB of 48.14 MB
+I, [2018-03-06T12:27:46.281976 #24836]  INFO -- default-win-2012: Progress: 2% - Saving 1.02 MB of 48.14 MB
+I, [2018-03-06T12:27:46.299572 #24836]  INFO -- default-win-2012: Progress: 2% - Saving 1.17 MB of 48.14 MB
+I, [2018-03-06T12:27:46.318146 #24836]  INFO -- default-win-2012: Progress: 2% - Saving 1.33 MB of 48.14 MB
+I, [2018-03-06T12:27:46.336721 #24836]  INFO -- default-win-2012: Progress: 3% - Saving 1.48 MB of 48.14 MB
+I, [2018-03-06T12:27:46.354319 #24836]  INFO -- default-win-2012: Progress: 3% - Saving 1.64 MB of 48.14 MB
+I, [2018-03-06T12:27:46.370936 #24836]  INFO -- default-win-2012: Progress: 3% - Saving 1.8 MB of 48.14 MB
+I, [2018-03-06T12:27:46.387557 #24836]  INFO -- default-win-2012: Progress: 4% - Saving 1.95 MB of 48.14 MB
+I, [2018-03-06T12:27:46.406130 #24836]  INFO -- default-win-2012: Progress: 4% - Saving 2.11 MB of 48.14 MB
+I, [2018-03-06T12:27:46.424704 #24836]  INFO -- default-win-2012: Progress: 4% - Saving 2.27 MB of 48.14 MB
+I, [2018-03-06T12:27:46.446211 #24836]  INFO -- default-win-2012: Progress: 5% - Saving 2.42 MB of 48.14 MB
+I, [2018-03-06T12:27:46.465764 #24836]  INFO -- default-win-2012: Progress: 5% - Saving 2.58 MB of 48.14 MB
+I, [2018-03-06T12:27:46.486293 #24836]  INFO -- default-win-2012: Progress: 5% - Saving 2.73 MB of 48.14 MB
+I, [2018-03-06T12:27:46.504867 #24836]  INFO -- default-win-2012: Progress: 6% - Saving 2.89 MB of 48.14 MB
+I, [2018-03-06T12:27:46.524417 #24836]  INFO -- default-win-2012: Progress: 6% - Saving 3.05 MB of 48.14 MB
+I, [2018-03-06T12:27:46.542017 #24836]  INFO -- default-win-2012: Progress: 6% - Saving 3.2 MB of 48.14 MB
+I, [2018-03-06T12:27:46.560588 #24836]  INFO -- default-win-2012: Progress: 6% - Saving 3.36 MB of 48.14 MB
+I, [2018-03-06T12:27:46.581118 #24836]  INFO -- default-win-2012: Progress: 7% - Saving 3.52 MB of 48.14 MB
+I, [2018-03-06T12:27:46.597739 #24836]  INFO -- default-win-2012: Progress: 7% - Saving 3.67 MB of 48.14 MB
+I, [2018-03-06T12:27:46.625111 #24836]  INFO -- default-win-2012: Progress: 7% - Saving 3.83 MB of 48.14 MB
+I, [2018-03-06T12:27:46.647595 #24836]  INFO -- default-win-2012: Progress: 8% - Saving 3.98 MB of 48.14 MB
+I, [2018-03-06T12:27:46.664213 #24836]  INFO -- default-win-2012: Progress: 8% - Saving 4.14 MB of 48.14 MB
+I, [2018-03-06T12:27:46.686698 #24836]  INFO -- default-win-2012: Progress: 8% - Saving 4.3 MB of 48.14 MB
+I, [2018-03-06T12:27:46.704296 #24836]  INFO -- default-win-2012: Progress: 9% - Saving 4.45 MB of 48.14 MB
+I, [2018-03-06T12:27:46.720915 #24836]  INFO -- default-win-2012: Progress: 9% - Saving 4.61 MB of 48.14 MB
+I, [2018-03-06T12:27:46.739488 #24836]  INFO -- default-win-2012: Progress: 9% - Saving 4.77 MB of 48.14 MB
+I, [2018-03-06T12:27:46.757084 #24836]  INFO -- default-win-2012: Progress: 10% - Saving 4.92 MB of 48.14 MB
+I, [2018-03-06T12:27:46.776636 #24836]  INFO -- default-win-2012: Progress: 10% - Saving 5.08 MB of 48.14 MB
+I, [2018-03-06T12:27:46.796189 #24836]  INFO -- default-win-2012: Progress: 10% - Saving 5.23 MB of 48.14 MB
+I, [2018-03-06T12:27:46.817696 #24836]  INFO -- default-win-2012: Progress: 11% - Saving 5.39 MB of 48.14 MB
+I, [2018-03-06T12:27:46.837247 #24836]  INFO -- default-win-2012: Progress: 11% - Saving 5.55 MB of 48.14 MB
+I, [2018-03-06T12:27:46.857778 #24836]  INFO -- default-win-2012: Progress: 11% - Saving 5.7 MB of 48.14 MB
+I, [2018-03-06T12:27:46.880261 #24836]  INFO -- default-win-2012: Progress: 12% - Saving 5.86 MB of 48.14 MB
+I, [2018-03-06T12:27:46.896879 #24836]  INFO -- default-win-2012: Progress: 12% - Saving 6.02 MB of 48.14 MB
+I, [2018-03-06T12:27:46.915454 #24836]  INFO -- default-win-2012: Progress: 12% - Saving 6.17 MB of 48.14 MB
+I, [2018-03-06T12:27:46.932074 #24836]  INFO -- default-win-2012: Progress: 13% - Saving 6.33 MB of 48.14 MB
+I, [2018-03-06T12:27:46.948692 #24836]  INFO -- default-win-2012: Progress: 13% - Saving 6.48 MB of 48.14 MB
+I, [2018-03-06T12:27:46.971176 #24836]  INFO -- default-win-2012: Progress: 13% - Saving 6.64 MB of 48.14 MB
+I, [2018-03-06T12:27:46.987797 #24836]  INFO -- default-win-2012: Progress: 14% - Saving 6.8 MB of 48.14 MB
+I, [2018-03-06T12:27:47.005393 #24836]  INFO -- default-win-2012: Progress: 14% - Saving 6.95 MB of 48.14 MB
+I, [2018-03-06T12:27:47.022990 #24836]  INFO -- default-win-2012: Progress: 14% - Saving 7.11 MB of 48.14 MB
+I, [2018-03-06T12:27:47.044496 #24836]  INFO -- default-win-2012: Progress: 15% - Saving 7.27 MB of 48.14 MB
+I, [2018-03-06T12:27:47.063071 #24836]  INFO -- default-win-2012: Progress: 15% - Saving 7.42 MB of 48.14 MB
+I, [2018-03-06T12:27:47.082622 #24836]  INFO -- default-win-2012: Progress: 15% - Saving 7.58 MB of 48.14 MB
+I, [2018-03-06T12:27:47.099242 #24836]  INFO -- default-win-2012: Progress: 16% - Saving 7.73 MB of 48.14 MB
+I, [2018-03-06T12:27:47.116838 #24836]  INFO -- default-win-2012: Progress: 16% - Saving 7.89 MB of 48.14 MB
+I, [2018-03-06T12:27:47.137367 #24836]  INFO -- default-win-2012: Progress: 16% - Saving 8.05 MB of 48.14 MB
+I, [2018-03-06T12:27:47.155941 #24836]  INFO -- default-win-2012: Progress: 17% - Saving 8.2 MB of 48.14 MB
+I, [2018-03-06T12:27:47.172560 #24836]  INFO -- default-win-2012: Progress: 17% - Saving 8.36 MB of 48.14 MB
+I, [2018-03-06T12:27:47.191134 #24836]  INFO -- default-win-2012: Progress: 17% - Saving 8.52 MB of 48.14 MB
+I, [2018-03-06T12:27:47.208732 #24836]  INFO -- default-win-2012: Progress: 18% - Saving 8.67 MB of 48.14 MB
+I, [2018-03-06T12:27:47.225350 #24836]  INFO -- default-win-2012: Progress: 18% - Saving 8.83 MB of 48.14 MB
+I, [2018-03-06T12:27:47.241970 #24836]  INFO -- default-win-2012: Progress: 18% - Saving 8.98 MB of 48.14 MB
+I, [2018-03-06T12:27:47.259566 #24836]  INFO -- default-win-2012: Progress: 18% - Saving 9.14 MB of 48.14 MB
+I, [2018-03-06T12:27:47.277162 #24836]  INFO -- default-win-2012: Progress: 19% - Saving 9.3 MB of 48.14 MB
+I, [2018-03-06T12:27:47.294762 #24836]  INFO -- default-win-2012: Progress: 19% - Saving 9.45 MB of 48.14 MB
+I, [2018-03-06T12:27:47.312358 #24836]  INFO -- default-win-2012: Progress: 19% - Saving 9.61 MB of 48.14 MB
+I, [2018-03-06T12:27:47.330930 #24836]  INFO -- default-win-2012: Progress: 20% - Saving 9.77 MB of 48.14 MB
+I, [2018-03-06T12:27:47.347549 #24836]  INFO -- default-win-2012: Progress: 20% - Saving 9.92 MB of 48.14 MB
+I, [2018-03-06T12:27:47.373943 #24836]  INFO -- default-win-2012: Progress: 20% - Saving 10.08 MB of 48.14 MB
+I, [2018-03-06T12:27:47.389586 #24836]  INFO -- default-win-2012: Progress: 21% - Saving 10.23 MB of 48.14 MB
+I, [2018-03-06T12:27:47.406205 #24836]  INFO -- default-win-2012: Progress: 21% - Saving 10.39 MB of 48.14 MB
+I, [2018-03-06T12:27:47.422824 #24836]  INFO -- default-win-2012: Progress: 21% - Saving 10.55 MB of 48.14 MB
+I, [2018-03-06T12:27:47.439443 #24836]  INFO -- default-win-2012: Progress: 22% - Saving 10.7 MB of 48.14 MB
+I, [2018-03-06T12:27:47.457040 #24836]  INFO -- default-win-2012: Progress: 22% - Saving 10.86 MB of 48.14 MB
+I, [2018-03-06T12:27:47.474636 #24836]  INFO -- default-win-2012: Progress: 22% - Saving 11.02 MB of 48.14 MB
+I, [2018-03-06T12:27:47.492233 #24836]  INFO -- default-win-2012: Progress: 23% - Saving 11.17 MB of 48.14 MB
+I, [2018-03-06T12:27:47.511786 #24836]  INFO -- default-win-2012: Progress: 23% - Saving 11.33 MB of 48.14 MB
+I, [2018-03-06T12:27:47.528404 #24836]  INFO -- default-win-2012: Progress: 23% - Saving 11.48 MB of 48.14 MB
+I, [2018-03-06T12:27:47.547954 #24836]  INFO -- default-win-2012: Progress: 24% - Saving 11.64 MB of 48.14 MB
+I, [2018-03-06T12:27:47.566529 #24836]  INFO -- default-win-2012: Progress: 24% - Saving 11.8 MB of 48.14 MB
+I, [2018-03-06T12:27:47.583149 #24836]  INFO -- default-win-2012: Progress: 24% - Saving 11.95 MB of 48.14 MB
+I, [2018-03-06T12:27:47.600744 #24836]  INFO -- default-win-2012: Progress: 25% - Saving 12.11 MB of 48.14 MB
+I, [2018-03-06T12:27:47.617364 #24836]  INFO -- default-win-2012: Progress: 25% - Saving 12.27 MB of 48.14 MB
+I, [2018-03-06T12:27:47.638870 #24836]  INFO -- default-win-2012: Progress: 25% - Saving 12.42 MB of 48.14 MB
+I, [2018-03-06T12:27:47.657445 #24836]  INFO -- default-win-2012: Progress: 26% - Saving 12.58 MB of 48.14 MB
+I, [2018-03-06T12:27:47.682862 #24836]  INFO -- default-win-2012: Progress: 26% - Saving 12.73 MB of 48.14 MB
+I, [2018-03-06T12:27:47.700459 #24836]  INFO -- default-win-2012: Progress: 26% - Saving 12.89 MB of 48.14 MB
+I, [2018-03-06T12:27:47.718055 #24836]  INFO -- default-win-2012: Progress: 27% - Saving 13.05 MB of 48.14 MB
+I, [2018-03-06T12:27:47.736631 #24836]  INFO -- default-win-2012: Progress: 27% - Saving 13.2 MB of 48.14 MB
+I, [2018-03-06T12:27:47.753252 #24836]  INFO -- default-win-2012: Progress: 27% - Saving 13.36 MB of 48.14 MB
+I, [2018-03-06T12:27:47.771822 #24836]  INFO -- default-win-2012: Progress: 28% - Saving 13.52 MB of 48.14 MB
+I, [2018-03-06T12:27:47.788443 #24836]  INFO -- default-win-2012: Progress: 28% - Saving 13.67 MB of 48.14 MB
+I, [2018-03-06T12:27:47.805061 #24836]  INFO -- default-win-2012: Progress: 28% - Saving 13.83 MB of 48.14 MB
+I, [2018-03-06T12:27:47.825590 #24836]  INFO -- default-win-2012: Progress: 29% - Saving 13.98 MB of 48.14 MB
+I, [2018-03-06T12:27:47.859807 #24836]  INFO -- default-win-2012: Progress: 29% - Saving 14.14 MB of 48.14 MB
+I, [2018-03-06T12:27:47.876425 #24836]  INFO -- default-win-2012: Progress: 29% - Saving 14.3 MB of 48.14 MB
+I, [2018-03-06T12:27:47.893044 #24836]  INFO -- default-win-2012: Progress: 30% - Saving 14.45 MB of 48.14 MB
+I, [2018-03-06T12:27:47.910641 #24836]  INFO -- default-win-2012: Progress: 30% - Saving 14.61 MB of 48.14 MB
+I, [2018-03-06T12:27:47.927260 #24836]  INFO -- default-win-2012: Progress: 30% - Saving 14.77 MB of 48.14 MB
+I, [2018-03-06T12:27:47.946811 #24836]  INFO -- default-win-2012: Progress: 30% - Saving 14.92 MB of 48.14 MB
+I, [2018-03-06T12:27:47.963432 #24836]  INFO -- default-win-2012: Progress: 31% - Saving 15.08 MB of 48.14 MB
+I, [2018-03-06T12:27:47.981027 #24836]  INFO -- default-win-2012: Progress: 31% - Saving 15.23 MB of 48.14 MB
+I, [2018-03-06T12:27:47.997647 #24836]  INFO -- default-win-2012: Progress: 31% - Saving 15.39 MB of 48.14 MB
+I, [2018-03-06T12:27:48.015242 #24836]  INFO -- default-win-2012: Progress: 32% - Saving 15.55 MB of 48.14 MB
+I, [2018-03-06T12:27:48.035773 #24836]  INFO -- default-win-2012: Progress: 32% - Saving 15.7 MB of 48.14 MB
+I, [2018-03-06T12:27:48.055325 #24836]  INFO -- default-win-2012: Progress: 32% - Saving 15.86 MB of 48.14 MB
+I, [2018-03-06T12:27:48.073898 #24836]  INFO -- default-win-2012: Progress: 33% - Saving 16.02 MB of 48.14 MB
+I, [2018-03-06T12:27:48.090518 #24836]  INFO -- default-win-2012: Progress: 33% - Saving 16.17 MB of 48.14 MB
+I, [2018-03-06T12:27:48.109091 #24836]  INFO -- default-win-2012: Progress: 33% - Saving 16.33 MB of 48.14 MB
+I, [2018-03-06T12:27:48.125711 #24836]  INFO -- default-win-2012: Progress: 34% - Saving 16.48 MB of 48.14 MB
+I, [2018-03-06T12:27:48.144289 #24836]  INFO -- default-win-2012: Progress: 34% - Saving 16.64 MB of 48.14 MB
+I, [2018-03-06T12:27:48.162864 #24836]  INFO -- default-win-2012: Progress: 34% - Saving 16.8 MB of 48.14 MB
+I, [2018-03-06T12:27:48.180457 #24836]  INFO -- default-win-2012: Progress: 35% - Saving 16.95 MB of 48.14 MB
+I, [2018-03-06T12:27:48.197075 #24836]  INFO -- default-win-2012: Progress: 35% - Saving 17.11 MB of 48.14 MB
+I, [2018-03-06T12:27:48.219561 #24836]  INFO -- default-win-2012: Progress: 35% - Saving 17.27 MB of 48.14 MB
+I, [2018-03-06T12:27:48.237155 #24836]  INFO -- default-win-2012: Progress: 36% - Saving 17.42 MB of 48.14 MB
+I, [2018-03-06T12:27:48.253775 #24836]  INFO -- default-win-2012: Progress: 36% - Saving 17.58 MB of 48.14 MB
+I, [2018-03-06T12:27:48.272348 #24836]  INFO -- default-win-2012: Progress: 36% - Saving 17.73 MB of 48.14 MB
+I, [2018-03-06T12:27:48.288969 #24836]  INFO -- default-win-2012: Progress: 37% - Saving 17.89 MB of 48.14 MB
+I, [2018-03-06T12:27:48.305587 #24836]  INFO -- default-win-2012: Progress: 37% - Saving 18.05 MB of 48.14 MB
+I, [2018-03-06T12:27:48.322207 #24836]  INFO -- default-win-2012: Progress: 37% - Saving 18.2 MB of 48.14 MB
+I, [2018-03-06T12:27:48.339803 #24836]  INFO -- default-win-2012: Progress: 38% - Saving 18.36 MB of 48.14 MB
+I, [2018-03-06T12:27:48.357399 #24836]  INFO -- default-win-2012: Progress: 38% - Saving 18.52 MB of 48.14 MB
+I, [2018-03-06T12:27:48.374995 #24836]  INFO -- default-win-2012: Progress: 38% - Saving 18.67 MB of 48.14 MB
+I, [2018-03-06T12:27:48.391615 #24836]  INFO -- default-win-2012: Progress: 39% - Saving 18.83 MB of 48.14 MB
+I, [2018-03-06T12:27:48.408234 #24836]  INFO -- default-win-2012: Progress: 39% - Saving 18.98 MB of 48.14 MB
+I, [2018-03-06T12:27:48.424853 #24836]  INFO -- default-win-2012: Progress: 39% - Saving 19.14 MB of 48.14 MB
+I, [2018-03-06T12:27:48.446361 #24836]  INFO -- default-win-2012: Progress: 40% - Saving 19.3 MB of 48.14 MB
+I, [2018-03-06T12:27:48.463956 #24836]  INFO -- default-win-2012: Progress: 40% - Saving 19.45 MB of 48.14 MB
+I, [2018-03-06T12:27:48.479599 #24836]  INFO -- default-win-2012: Progress: 40% - Saving 19.61 MB of 48.14 MB
+I, [2018-03-06T12:27:48.498173 #24836]  INFO -- default-win-2012: Progress: 41% - Saving 19.77 MB of 48.14 MB
+I, [2018-03-06T12:27:48.516747 #24836]  INFO -- default-win-2012: Progress: 41% - Saving 19.92 MB of 48.14 MB
+I, [2018-03-06T12:27:48.534344 #24836]  INFO -- default-win-2012: Progress: 41% - Saving 20.08 MB of 48.14 MB
+I, [2018-03-06T12:27:49.270468 #24836]  INFO -- default-win-2012: Progress: 42% - Saving 20.23 MB of 48.14 MB
+I, [2018-03-06T12:27:49.288066 #24836]  INFO -- default-win-2012: Progress: 42% - Saving 20.39 MB of 48.14 MB
+I, [2018-03-06T12:27:49.306640 #24836]  INFO -- default-win-2012: Progress: 42% - Saving 20.55 MB of 48.14 MB
+I, [2018-03-06T12:27:49.323258 #24836]  INFO -- default-win-2012: Progress: 43% - Saving 20.7 MB of 48.14 MB
+I, [2018-03-06T12:27:49.340854 #24836]  INFO -- default-win-2012: Progress: 43% - Saving 20.86 MB of 48.14 MB
+I, [2018-03-06T12:27:49.358450 #24836]  INFO -- default-win-2012: Progress: 43% - Saving 21.02 MB of 48.14 MB
+I, [2018-03-06T12:27:49.377027 #24836]  INFO -- default-win-2012: Progress: 43% - Saving 21.17 MB of 48.14 MB
+I, [2018-03-06T12:27:49.394622 #24836]  INFO -- default-win-2012: Progress: 44% - Saving 21.33 MB of 48.14 MB
+I, [2018-03-06T12:27:49.411241 #24836]  INFO -- default-win-2012: Progress: 44% - Saving 21.48 MB of 48.14 MB
+I, [2018-03-06T12:27:49.428837 #24836]  INFO -- default-win-2012: Progress: 44% - Saving 21.64 MB of 48.14 MB
+I, [2018-03-06T12:27:49.446436 #24836]  INFO -- default-win-2012: Progress: 45% - Saving 21.8 MB of 48.14 MB
+I, [2018-03-06T12:27:49.464031 #24836]  INFO -- default-win-2012: Progress: 45% - Saving 21.95 MB of 48.14 MB
+I, [2018-03-06T12:27:49.486516 #24836]  INFO -- default-win-2012: Progress: 45% - Saving 22.11 MB of 48.14 MB
+I, [2018-03-06T12:27:49.503136 #24836]  INFO -- default-win-2012: Progress: 46% - Saving 22.27 MB of 48.14 MB
+I, [2018-03-06T12:27:49.519755 #24836]  INFO -- default-win-2012: Progress: 46% - Saving 22.42 MB of 48.14 MB
+I, [2018-03-06T12:27:49.540284 #24836]  INFO -- default-win-2012: Progress: 46% - Saving 22.58 MB of 48.14 MB
+I, [2018-03-06T12:27:49.558858 #24836]  INFO -- default-win-2012: Progress: 47% - Saving 22.73 MB of 48.14 MB
+I, [2018-03-06T12:27:49.577440 #24836]  INFO -- default-win-2012: Progress: 47% - Saving 22.89 MB of 48.14 MB
+I, [2018-03-06T12:27:49.595029 #24836]  INFO -- default-win-2012: Progress: 47% - Saving 23.05 MB of 48.14 MB
+I, [2018-03-06T12:27:49.612626 #24836]  INFO -- default-win-2012: Progress: 48% - Saving 23.2 MB of 48.14 MB
+I, [2018-03-06T12:27:49.632176 #24836]  INFO -- default-win-2012: Progress: 48% - Saving 23.36 MB of 48.14 MB
+I, [2018-03-06T12:27:49.648797 #24836]  INFO -- default-win-2012: Progress: 48% - Saving 23.52 MB of 48.14 MB
+I, [2018-03-06T12:27:49.667369 #24836]  INFO -- default-win-2012: Progress: 49% - Saving 23.67 MB of 48.14 MB
+I, [2018-03-06T12:27:49.683990 #24836]  INFO -- default-win-2012: Progress: 49% - Saving 23.83 MB of 48.14 MB
+I, [2018-03-06T12:27:49.701587 #24836]  INFO -- default-win-2012: Progress: 49% - Saving 23.98 MB of 48.14 MB
+I, [2018-03-06T12:27:49.719182 #24836]  INFO -- default-win-2012: Progress: 50% - Saving 24.14 MB of 48.14 MB
+I, [2018-03-06T12:27:49.736778 #24836]  INFO -- default-win-2012: Progress: 50% - Saving 24.3 MB of 48.14 MB
+I, [2018-03-06T12:27:49.752420 #24836]  INFO -- default-win-2012: Progress: 50% - Saving 24.45 MB of 48.14 MB
+I, [2018-03-06T12:27:49.770017 #24836]  INFO -- default-win-2012: Progress: 51% - Saving 24.61 MB of 48.14 MB
+I, [2018-03-06T12:27:49.786636 #24836]  INFO -- default-win-2012: Progress: 51% - Saving 24.77 MB of 48.14 MB
+I, [2018-03-06T12:27:49.805211 #24836]  INFO -- default-win-2012: Progress: 51% - Saving 24.92 MB of 48.14 MB
+I, [2018-03-06T12:27:49.821828 #24836]  INFO -- default-win-2012: Progress: 52% - Saving 25.08 MB of 48.14 MB
+I, [2018-03-06T12:27:49.839425 #24836]  INFO -- default-win-2012: Progress: 52% - Saving 25.23 MB of 48.14 MB
+I, [2018-03-06T12:27:49.858977 #24836]  INFO -- default-win-2012: Progress: 52% - Saving 25.39 MB of 48.14 MB
+I, [2018-03-06T12:27:49.876574 #24836]  INFO -- default-win-2012: Progress: 53% - Saving 25.55 MB of 48.14 MB
+I, [2018-03-06T12:27:49.893194 #24836]  INFO -- default-win-2012: Progress: 53% - Saving 25.7 MB of 48.14 MB
+I, [2018-03-06T12:27:49.910789 #24836]  INFO -- default-win-2012: Progress: 53% - Saving 25.86 MB of 48.14 MB
+I, [2018-03-06T12:27:49.927409 #24836]  INFO -- default-win-2012: Progress: 54% - Saving 26.02 MB of 48.14 MB
+I, [2018-03-06T12:27:49.945984 #24836]  INFO -- default-win-2012: Progress: 54% - Saving 26.17 MB of 48.14 MB
+I, [2018-03-06T12:27:49.963580 #24836]  INFO -- default-win-2012: Progress: 54% - Saving 26.33 MB of 48.14 MB
+I, [2018-03-06T12:27:49.982154 #24836]  INFO -- default-win-2012: Progress: 55% - Saving 26.48 MB of 48.14 MB
+I, [2018-03-06T12:27:50.000729 #24836]  INFO -- default-win-2012: Progress: 55% - Saving 26.64 MB of 48.14 MB
+I, [2018-03-06T12:27:50.022236 #24836]  INFO -- default-win-2012: Progress: 55% - Saving 26.8 MB of 48.14 MB
+I, [2018-03-06T12:27:50.041791 #24836]  INFO -- default-win-2012: Progress: 55% - Saving 26.95 MB of 48.14 MB
+I, [2018-03-06T12:27:50.062316 #24836]  INFO -- default-win-2012: Progress: 56% - Saving 27.11 MB of 48.14 MB
+I, [2018-03-06T12:27:50.081867 #24836]  INFO -- default-win-2012: Progress: 56% - Saving 27.27 MB of 48.14 MB
+I, [2018-03-06T12:27:50.098488 #24836]  INFO -- default-win-2012: Progress: 56% - Saving 27.42 MB of 48.14 MB
+I, [2018-03-06T12:27:50.118039 #24836]  INFO -- default-win-2012: Progress: 57% - Saving 27.58 MB of 48.14 MB
+I, [2018-03-06T12:27:50.138568 #24836]  INFO -- default-win-2012: Progress: 57% - Saving 27.73 MB of 48.14 MB
+I, [2018-03-06T12:27:50.159100 #24836]  INFO -- default-win-2012: Progress: 57% - Saving 27.89 MB of 48.14 MB
+I, [2018-03-06T12:27:50.178650 #24836]  INFO -- default-win-2012: Progress: 58% - Saving 28.05 MB of 48.14 MB
+I, [2018-03-06T12:27:50.196247 #24836]  INFO -- default-win-2012: Progress: 58% - Saving 28.2 MB of 48.14 MB
+I, [2018-03-06T12:27:50.217754 #24836]  INFO -- default-win-2012: Progress: 58% - Saving 28.36 MB of 48.14 MB
+I, [2018-03-06T12:27:50.235350 #24836]  INFO -- default-win-2012: Progress: 59% - Saving 28.52 MB of 48.14 MB
+I, [2018-03-06T12:27:50.260768 #24836]  INFO -- default-win-2012: Progress: 59% - Saving 28.67 MB of 48.14 MB
+I, [2018-03-06T12:27:50.279342 #24836]  INFO -- default-win-2012: Progress: 59% - Saving 28.83 MB of 48.14 MB
+I, [2018-03-06T12:27:50.300848 #24836]  INFO -- default-win-2012: Progress: 60% - Saving 28.98 MB of 48.14 MB
+I, [2018-03-06T12:27:50.317467 #24836]  INFO -- default-win-2012: Progress: 60% - Saving 29.14 MB of 48.14 MB
+I, [2018-03-06T12:27:50.337997 #24836]  INFO -- default-win-2012: Progress: 60% - Saving 29.3 MB of 48.14 MB
+I, [2018-03-06T12:27:50.356573 #24836]  INFO -- default-win-2012: Progress: 61% - Saving 29.45 MB of 48.14 MB
+I, [2018-03-06T12:27:50.375147 #24836]  INFO -- default-win-2012: Progress: 61% - Saving 29.61 MB of 48.14 MB
+I, [2018-03-06T12:27:50.393719 #24836]  INFO -- default-win-2012: Progress: 61% - Saving 29.77 MB of 48.14 MB
+I, [2018-03-06T12:27:50.412293 #24836]  INFO -- default-win-2012: Progress: 62% - Saving 29.92 MB of 48.14 MB
+I, [2018-03-06T12:27:50.429892 #24836]  INFO -- default-win-2012: Progress: 62% - Saving 30.08 MB of 48.14 MB
+I, [2018-03-06T12:27:50.451397 #24836]  INFO -- default-win-2012: Progress: 62% - Saving 30.23 MB of 48.14 MB
+I, [2018-03-06T12:27:50.475837 #24836]  INFO -- default-win-2012: Progress: 63% - Saving 30.39 MB of 48.14 MB
+I, [2018-03-06T12:27:50.493433 #24836]  INFO -- default-win-2012: Progress: 63% - Saving 30.55 MB of 48.14 MB
+I, [2018-03-06T12:27:50.512986 #24836]  INFO -- default-win-2012: Progress: 63% - Saving 30.7 MB of 48.14 MB
+I, [2018-03-06T12:27:50.537425 #24836]  INFO -- default-win-2012: Progress: 64% - Saving 30.86 MB of 48.14 MB
+I, [2018-03-06T12:27:50.565774 #24836]  INFO -- default-win-2012: Progress: 64% - Saving 31.02 MB of 48.14 MB
+I, [2018-03-06T12:27:50.590215 #24836]  INFO -- default-win-2012: Progress: 64% - Saving 31.17 MB of 48.14 MB
+I, [2018-03-06T12:27:50.608788 #24836]  INFO -- default-win-2012: Progress: 65% - Saving 31.33 MB of 48.14 MB
+I, [2018-03-06T12:27:50.630295 #24836]  INFO -- default-win-2012: Progress: 65% - Saving 31.48 MB of 48.14 MB
+I, [2018-03-06T12:27:50.649849 #24836]  INFO -- default-win-2012: Progress: 65% - Saving 31.64 MB of 48.14 MB
+I, [2018-03-06T12:27:50.671355 #24836]  INFO -- default-win-2012: Progress: 66% - Saving 31.8 MB of 48.14 MB
+I, [2018-03-06T12:27:50.699706 #24836]  INFO -- default-win-2012: Progress: 66% - Saving 31.95 MB of 48.14 MB
+I, [2018-03-06T12:27:50.722189 #24836]  INFO -- default-win-2012: Progress: 66% - Saving 32.11 MB of 48.14 MB
+I, [2018-03-06T12:27:50.743696 #24836]  INFO -- default-win-2012: Progress: 67% - Saving 32.27 MB of 48.14 MB
+I, [2018-03-06T12:27:50.769114 #24836]  INFO -- default-win-2012: Progress: 67% - Saving 32.42 MB of 48.14 MB
+I, [2018-03-06T12:27:50.788666 #24836]  INFO -- default-win-2012: Progress: 67% - Saving 32.58 MB of 48.14 MB
+I, [2018-03-06T12:27:50.814082 #24836]  INFO -- default-win-2012: Progress: 68% - Saving 32.73 MB of 48.14 MB
+I, [2018-03-06T12:27:50.831681 #24836]  INFO -- default-win-2012: Progress: 68% - Saving 32.89 MB of 48.14 MB
+I, [2018-03-06T12:27:50.850253 #24836]  INFO -- default-win-2012: Progress: 68% - Saving 33.05 MB of 48.14 MB
+I, [2018-03-06T12:27:50.866872 #24836]  INFO -- default-win-2012: Progress: 68% - Saving 33.2 MB of 48.14 MB
+I, [2018-03-06T12:27:50.884468 #24836]  INFO -- default-win-2012: Progress: 69% - Saving 33.36 MB of 48.14 MB
+I, [2018-03-06T12:27:50.909886 #24836]  INFO -- default-win-2012: Progress: 69% - Saving 33.52 MB of 48.14 MB
+I, [2018-03-06T12:27:50.927484 #24836]  INFO -- default-win-2012: Progress: 69% - Saving 33.67 MB of 48.14 MB
+I, [2018-03-06T12:27:50.945080 #24836]  INFO -- default-win-2012: Progress: 70% - Saving 33.83 MB of 48.14 MB
+I, [2018-03-06T12:27:50.961700 #24836]  INFO -- default-win-2012: Progress: 70% - Saving 33.98 MB of 48.14 MB
+I, [2018-03-06T12:27:50.979295 #24836]  INFO -- default-win-2012: Progress: 70% - Saving 34.14 MB of 48.14 MB
+I, [2018-03-06T12:27:50.994936 #24836]  INFO -- default-win-2012: Progress: 71% - Saving 34.3 MB of 48.14 MB
+I, [2018-03-06T12:27:51.013512 #24836]  INFO -- default-win-2012: Progress: 71% - Saving 34.45 MB of 48.14 MB
+I, [2018-03-06T12:27:51.031110 #24836]  INFO -- default-win-2012: Progress: 71% - Saving 34.61 MB of 48.14 MB
+I, [2018-03-06T12:27:51.049683 #24836]  INFO -- default-win-2012: Progress: 72% - Saving 34.77 MB of 48.14 MB
+I, [2018-03-06T12:27:51.066302 #24836]  INFO -- default-win-2012: Progress: 72% - Saving 34.92 MB of 48.14 MB
+I, [2018-03-06T12:27:51.092696 #24836]  INFO -- default-win-2012: Progress: 72% - Saving 35.08 MB of 48.14 MB
+I, [2018-03-06T12:27:51.111269 #24836]  INFO -- default-win-2012: Progress: 73% - Saving 35.23 MB of 48.14 MB
+I, [2018-03-06T12:27:51.127890 #24836]  INFO -- default-win-2012: Progress: 73% - Saving 35.39 MB of 48.14 MB
+I, [2018-03-06T12:27:51.146464 #24836]  INFO -- default-win-2012: Progress: 73% - Saving 35.55 MB of 48.14 MB
+I, [2018-03-06T12:27:51.165037 #24836]  INFO -- default-win-2012: Progress: 74% - Saving 35.7 MB of 48.14 MB
+I, [2018-03-06T12:27:51.181665 #24836]  INFO -- default-win-2012: Progress: 74% - Saving 35.86 MB of 48.14 MB
+I, [2018-03-06T12:27:51.201208 #24836]  INFO -- default-win-2012: Progress: 74% - Saving 36.02 MB of 48.14 MB
+I, [2018-03-06T12:27:51.218804 #24836]  INFO -- default-win-2012: Progress: 75% - Saving 36.17 MB of 48.14 MB
+I, [2018-03-06T12:27:51.236403 #24836]  INFO -- default-win-2012: Progress: 75% - Saving 36.33 MB of 48.14 MB
+I, [2018-03-06T12:27:51.254977 #24836]  INFO -- default-win-2012: Progress: 75% - Saving 36.48 MB of 48.14 MB
+I, [2018-03-06T12:27:51.273551 #24836]  INFO -- default-win-2012: Progress: 76% - Saving 36.64 MB of 48.14 MB
+I, [2018-03-06T12:27:51.292124 #24836]  INFO -- default-win-2012: Progress: 76% - Saving 36.8 MB of 48.14 MB
+I, [2018-03-06T12:27:51.309720 #24836]  INFO -- default-win-2012: Progress: 76% - Saving 36.95 MB of 48.14 MB
+I, [2018-03-06T12:27:51.330252 #24836]  INFO -- default-win-2012: Progress: 77% - Saving 37.11 MB of 48.14 MB
+I, [2018-03-06T12:27:51.356645 #24836]  INFO -- default-win-2012: Progress: 77% - Saving 37.27 MB of 48.14 MB
+I, [2018-03-06T12:27:51.391838 #24836]  INFO -- default-win-2012: Progress: 77% - Saving 37.42 MB of 48.14 MB
+I, [2018-03-06T12:27:51.408458 #24836]  INFO -- default-win-2012: Progress: 78% - Saving 37.58 MB of 48.14 MB
+I, [2018-03-06T12:27:51.425077 #24836]  INFO -- default-win-2012: Progress: 78% - Saving 37.73 MB of 48.14 MB
+I, [2018-03-06T12:27:51.442674 #24836]  INFO -- default-win-2012: Progress: 78% - Saving 37.89 MB of 48.14 MB
+I, [2018-03-06T12:27:51.469068 #24836]  INFO -- default-win-2012: Progress: 79% - Saving 38.05 MB of 48.14 MB
+I, [2018-03-06T12:27:51.487643 #24836]  INFO -- default-win-2012: Progress: 79% - Saving 38.2 MB of 48.14 MB
+I, [2018-03-06T12:27:51.505239 #24836]  INFO -- default-win-2012: Progress: 79% - Saving 38.36 MB of 48.14 MB
+I, [2018-03-06T12:27:51.523817 #24836]  INFO -- default-win-2012: Progress: 80% - Saving 38.52 MB of 48.14 MB
+I, [2018-03-06T12:27:51.546298 #24836]  INFO -- default-win-2012: Progress: 80% - Saving 38.67 MB of 48.14 MB
+I, [2018-03-06T12:27:51.565848 #24836]  INFO -- default-win-2012: Progress: 80% - Saving 38.83 MB of 48.14 MB
+I, [2018-03-06T12:27:51.584423 #24836]  INFO -- default-win-2012: Progress: 80% - Saving 38.98 MB of 48.14 MB
+I, [2018-03-06T12:27:51.602020 #24836]  INFO -- default-win-2012: Progress: 81% - Saving 39.14 MB of 48.14 MB
+I, [2018-03-06T12:27:51.619617 #24836]  INFO -- default-win-2012: Progress: 81% - Saving 39.3 MB of 48.14 MB
+I, [2018-03-06T12:27:51.638190 #24836]  INFO -- default-win-2012: Progress: 81% - Saving 39.45 MB of 48.14 MB
+I, [2018-03-06T12:27:51.658723 #24836]  INFO -- default-win-2012: Progress: 82% - Saving 39.61 MB of 48.14 MB
+I, [2018-03-06T12:27:51.677295 #24836]  INFO -- default-win-2012: Progress: 82% - Saving 39.77 MB of 48.14 MB
+I, [2018-03-06T12:27:51.695870 #24836]  INFO -- default-win-2012: Progress: 82% - Saving 39.92 MB of 48.14 MB
+I, [2018-03-06T12:27:51.715423 #24836]  INFO -- default-win-2012: Progress: 83% - Saving 40.08 MB of 48.14 MB
+I, [2018-03-06T12:27:51.733016 #24836]  INFO -- default-win-2012: Progress: 83% - Saving 40.23 MB of 48.14 MB
+I, [2018-03-06T12:27:51.757458 #24836]  INFO -- default-win-2012: Progress: 83% - Saving 40.39 MB of 48.14 MB
+I, [2018-03-06T12:27:51.775054 #24836]  INFO -- default-win-2012: Progress: 84% - Saving 40.55 MB of 48.14 MB
+I, [2018-03-06T12:27:51.793629 #24836]  INFO -- default-win-2012: Progress: 84% - Saving 40.7 MB of 48.14 MB
+I, [2018-03-06T12:27:51.816116 #24836]  INFO -- default-win-2012: Progress: 84% - Saving 40.86 MB of 48.14 MB
+I, [2018-03-06T12:27:51.840553 #24836]  INFO -- default-win-2012: Progress: 85% - Saving 41.02 MB of 48.14 MB
+I, [2018-03-06T12:27:51.860103 #24836]  INFO -- default-win-2012: Progress: 85% - Saving 41.17 MB of 48.14 MB
+I, [2018-03-06T12:27:51.886499 #24836]  INFO -- default-win-2012: Progress: 85% - Saving 41.33 MB of 48.14 MB
+I, [2018-03-06T12:27:51.908006 #24836]  INFO -- default-win-2012: Progress: 86% - Saving 41.48 MB of 48.14 MB
+I, [2018-03-06T12:27:51.929513 #24836]  INFO -- default-win-2012: Progress: 86% - Saving 41.64 MB of 48.14 MB
+I, [2018-03-06T12:27:51.951019 #24836]  INFO -- default-win-2012: Progress: 86% - Saving 41.8 MB of 48.14 MB
+I, [2018-03-06T12:27:51.970572 #24836]  INFO -- default-win-2012: Progress: 87% - Saving 41.95 MB of 48.14 MB
+I, [2018-03-06T12:27:51.990125 #24836]  INFO -- default-win-2012: Progress: 87% - Saving 42.11 MB of 48.14 MB
+I, [2018-03-06T12:27:52.013585 #24836]  INFO -- default-win-2012: Progress: 87% - Saving 42.27 MB of 48.14 MB
+I, [2018-03-06T12:27:52.031181 #24836]  INFO -- default-win-2012: Progress: 88% - Saving 42.42 MB of 48.14 MB
+I, [2018-03-06T12:27:52.051711 #24836]  INFO -- default-win-2012: Progress: 88% - Saving 42.58 MB of 48.14 MB
+I, [2018-03-06T12:27:52.070285 #24836]  INFO -- default-win-2012: Progress: 88% - Saving 42.73 MB of 48.14 MB
+I, [2018-03-06T12:27:52.092770 #24836]  INFO -- default-win-2012: Progress: 89% - Saving 42.89 MB of 48.14 MB
+I, [2018-03-06T12:27:52.111345 #24836]  INFO -- default-win-2012: Progress: 89% - Saving 43.05 MB of 48.14 MB
+I, [2018-03-06T12:27:52.129918 #24836]  INFO -- default-win-2012: Progress: 89% - Saving 43.2 MB of 48.14 MB
+I, [2018-03-06T12:27:52.148492 #24836]  INFO -- default-win-2012: Progress: 90% - Saving 43.36 MB of 48.14 MB
+I, [2018-03-06T12:27:52.167068 #24836]  INFO -- default-win-2012: Progress: 90% - Saving 43.52 MB of 48.14 MB
+I, [2018-03-06T12:27:52.183686 #24836]  INFO -- default-win-2012: Progress: 90% - Saving 43.67 MB of 48.14 MB
+I, [2018-03-06T12:27:52.199328 #24836]  INFO -- default-win-2012: Progress: 91% - Saving 43.83 MB of 48.14 MB
+I, [2018-03-06T12:27:52.220834 #24836]  INFO -- default-win-2012: Progress: 91% - Saving 43.98 MB of 48.14 MB
+I, [2018-03-06T12:27:52.238431 #24836]  INFO -- default-win-2012: Progress: 91% - Saving 44.14 MB of 48.14 MB
+I, [2018-03-06T12:27:52.259938 #24836]  INFO -- default-win-2012: Progress: 92% - Saving 44.3 MB of 48.14 MB
+I, [2018-03-06T12:27:52.282425 #24836]  INFO -- default-win-2012: Progress: 92% - Saving 44.45 MB of 48.14 MB
+I, [2018-03-06T12:27:52.302952 #24836]  INFO -- default-win-2012: Progress: 92% - Saving 44.61 MB of 48.14 MB
+I, [2018-03-06T12:27:52.321526 #24836]  INFO -- default-win-2012: Progress: 92% - Saving 44.77 MB of 48.14 MB
+I, [2018-03-06T12:27:52.341079 #24836]  INFO -- default-win-2012: Progress: 93% - Saving 44.92 MB of 48.14 MB
+I, [2018-03-06T12:27:52.358675 #24836]  INFO -- default-win-2012: Progress: 93% - Saving 45.08 MB of 48.14 MB
+I, [2018-03-06T12:27:52.376272 #24836]  INFO -- default-win-2012: Progress: 93% - Saving 45.23 MB of 48.14 MB
+I, [2018-03-06T12:27:52.396800 #24836]  INFO -- default-win-2012: Progress: 94% - Saving 45.39 MB of 48.14 MB
+I, [2018-03-06T12:27:52.414397 #24836]  INFO -- default-win-2012: Progress: 94% - Saving 45.55 MB of 48.14 MB
+I, [2018-03-06T12:27:52.433949 #24836]  INFO -- default-win-2012: Progress: 94% - Saving 45.7 MB of 48.14 MB
+I, [2018-03-06T12:27:52.450569 #24836]  INFO -- default-win-2012: Progress: 95% - Saving 45.86 MB of 48.14 MB
+I, [2018-03-06T12:27:52.470119 #24836]  INFO -- default-win-2012: Progress: 95% - Saving 46.02 MB of 48.14 MB
+I, [2018-03-06T12:27:52.487716 #24836]  INFO -- default-win-2012: Progress: 95% - Saving 46.17 MB of 48.14 MB
+I, [2018-03-06T12:27:52.510202 #24836]  INFO -- default-win-2012: Progress: 96% - Saving 46.33 MB of 48.14 MB
+I, [2018-03-06T12:27:52.527798 #24836]  INFO -- default-win-2012: Progress: 96% - Saving 46.48 MB of 48.14 MB
+I, [2018-03-06T12:27:52.544416 #24836]  INFO -- default-win-2012: Progress: 96% - Saving 46.64 MB of 48.14 MB
+I, [2018-03-06T12:27:52.563968 #24836]  INFO -- default-win-2012: Progress: 97% - Saving 46.8 MB of 48.14 MB
+I, [2018-03-06T12:27:52.580587 #24836]  INFO -- default-win-2012: Progress: 97% - Saving 46.95 MB of 48.14 MB
+I, [2018-03-06T12:27:52.599162 #24836]  INFO -- default-win-2012: Progress: 97% - Saving 47.11 MB of 48.14 MB
+I, [2018-03-06T12:27:52.617735 #24836]  INFO -- default-win-2012: Progress: 98% - Saving 47.27 MB of 48.14 MB
+I, [2018-03-06T12:27:52.636311 #24836]  INFO -- default-win-2012: Progress: 98% - Saving 47.42 MB of 48.14 MB
+I, [2018-03-06T12:27:52.659772 #24836]  INFO -- default-win-2012: Progress: 98% - Saving 47.58 MB of 48.14 MB
+I, [2018-03-06T12:27:52.676391 #24836]  INFO -- default-win-2012: Progress: 99% - Saving 47.73 MB of 48.14 MB
+I, [2018-03-06T12:27:52.693988 #24836]  INFO -- default-win-2012: Progress: 99% - Saving 47.89 MB of 48.14 MB
+I, [2018-03-06T12:27:52.711585 #24836]  INFO -- default-win-2012: Progress: 99% - Saving 48.05 MB of 48.14 MB
+I, [2018-03-06T12:27:52.732114 #24836]  INFO -- default-win-2012: Progress: 100% - Completed download of C:\Users\vagrant\AppData\Local\Temp\chocolatey\GoogleChrome\64.0.3282.18600\googlechromestandaloneenterprise64.msi (48.14 MB).
+I, [2018-03-06T12:27:52.750687 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:52.768285 #24836]  INFO -- default-win-2012:          Download of googlechromestandaloneenterprise64.msi (48.14 MB) completed.
+I, [2018-03-06T12:27:52.793702 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:53.467262 #24836]  INFO -- default-win-2012:          Hashes match.
+I, [2018-03-06T12:27:53.483881 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:27:53.501478 #24836]  INFO -- default-win-2012:          Installing googlechrome...
+I, [2018-03-06T12:27:53.519074 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:03.957779 #24836]  INFO -- default-win-2012:          googlechrome has been installed.
+I, [2018-03-06T12:28:03.976353 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:03.995903 #24836]  INFO -- default-win-2012:            googlechrome may be able to be automatically uninstalled.
+I, [2018-03-06T12:28:04.014478 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.035007 #24836]  INFO -- default-win-2012:           The install of googlechrome was successful.
+I, [2018-03-06T12:28:04.057494 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.079977 #24836]  INFO -- default-win-2012:            Software installed as 'MSI', install location is likely default.
+I, [2018-03-06T12:28:04.100506 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.122013 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.143521 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.163072 #24836]  INFO -- default-win-2012:          Chocolatey installed 2/2 packages. 
+I, [2018-03-06T12:28:04.184580 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.206087 #24836]  INFO -- default-win-2012:           See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+I, [2018-03-06T12:28:04.228571 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.250077 #24836]  INFO -- default-win-2012:       - execute "C:\ProgramData\chocolatey/bin/choco" install -y  googlechrome
+I, [2018-03-06T12:28:04.269629 #24836]  INFO -- default-win-2012:     * ruby_block[track-path-googlechrome] action run
+I, [2018-03-06T12:28:04.289180 #24836]  INFO -- default-win-2012:       - execute the ruby block track-path-googlechrome
+I, [2018-03-06T12:28:04.308733 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.333174 #24836]  INFO -- default-win-2012: 
+I, [2018-03-06T12:28:04.354680 #24836]  INFO -- default-win-2012: Running handlers:
+I, [2018-03-06T12:28:04.376187 #24836]  INFO -- default-win-2012: Running handlers complete
+I, [2018-03-06T12:28:04.397693 #24836]  INFO -- default-win-2012: Chef Client finished, 5/5 resources updated in 37 seconds
+I, [2018-03-06T12:28:04.537489 #24836]  INFO -- default-win-2012: Finished converging <default-win-2012> (0m49.25s).

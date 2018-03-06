@@ -1,0 +1,13 @@
+DEPENDENCIES
+  initialise_windows
+    path: .
+    metadata: true
+
+GRAPH
+  chocolatey (1.2.1)
+    windows (>= 1.38)
+  initialise_windows (0.0.1)
+    chocolatey (>= 0.0.0)
+  ohai (5.2.2)
+  windows (3.5.2)
+    ohai (>= 4.0.0)

@@ -25,4 +25,8 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[chocolatey::default]
       - recipe[initialise_windows::default]
+    attributes:
+      chocolatey:
+        upgrade: true

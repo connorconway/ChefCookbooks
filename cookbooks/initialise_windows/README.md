@@ -1,27 +1,27 @@
-# Example
+# initialise_windows
 
-An example cookbook
+A cookbook to initialise windows and install common applications
 
 ## Requirements
 
 ### Platform:
 
-_No platforms defined_
+- Windows Server 2012
 
 ### Cookbooks:
 
-_No dependencies defined_
+- chocolatey
 
 ## Attributes
 
-- `node['example']['name']` - Defaults to `Sam Doe`.
-
 ## Recipes
 
-- example::default
+- chocolatey::default
+- initialise_windows::default
+- initialise_windows::chrome
 
 ## License and Maintainer
 
-Maintainer:: (<>)
+Maintainer:: (<Connor Conway>)
 
 License:: All rights reserved
