@@ -6,7 +6,7 @@
 
 require 'spec_helper'
 
-describe 'initialise_windows::git' do
+describe 'initialise_windows::sublime' do
   context 'when all attributes are default, a windows 2016 server' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(platform: 'windows', version: '2016')
@@ -17,16 +17,8 @@ describe 'initialise_windows::git' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'installs git' do
-      expect(chef_run).to upgrade_chocolatey_package('git')
-    end
-
-    it 'installs git lfs' do
-      expect(chef_run).to upgrade_chocolatey_package('git-lfs')
-    end
-
-     it 'installs poshgit' do
-      expect(chef_run).to upgrade_chocolatey_package('poshgit')
+    it 'installs sublime' do
+      expect(chef_run).to upgrade_chocolatey_package('sublimetext3')
     end
   end
 end

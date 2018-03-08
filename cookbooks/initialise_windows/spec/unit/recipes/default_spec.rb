@@ -20,5 +20,13 @@ describe 'initialise_windows::default' do
     it 'is running the git recipe' do
       expect(chef_run).to include_recipe('initialise_windows::git')
     end
+
+    it 'is running the sublime recipe' do
+      expect(chef_run).to include_recipe('initialise_windows::sublime')
+    end
+
+    it 'is running the visual studio recipe' do
+      expect(chef_run).to include_recipe('initialise_windows::visual_studio')
+    end
   end
 end

@@ -5,3 +5,5 @@
 
 include_recipe '::chrome'
 include_recipe '::git'
+include_recipe '::sublime'
+include_recipe '::visual_studio'
