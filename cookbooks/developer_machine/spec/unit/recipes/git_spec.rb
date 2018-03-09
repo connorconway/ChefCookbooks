@@ -1,12 +1,12 @@
 #
-# Cookbook:: initialise_windows
+# Cookbook:: developer_machine
 # Spec:: default
 #
 # Copyright (c) 2018 Connor Conway, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'initialise_windows::git' do
+describe 'developer_machine::git' do
   context 'when all attributes are default, a windows 2016 server' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(platform: 'windows', version: '2016')

@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-name 'initialise_windows'
+name 'developer_machine'
 maintainer 'Connor Conway'
 maintainer_email 'connor_conway1@outlook.com'
 description 'Installs/Configures Windows with common applications'

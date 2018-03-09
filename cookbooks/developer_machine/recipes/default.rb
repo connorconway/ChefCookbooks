@@ -1,4 +1,4 @@
-# Cookbook Name:: initialise_windows
+# Cookbook Name:: developer_machine
 # Recipe:: default
 #
 # Copyright (c) 2018 Connor Conway, All Rights Reserved.

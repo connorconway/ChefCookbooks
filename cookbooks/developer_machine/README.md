@@ -1,4 +1,4 @@
-# initialise_windows
+# developer_machine
 
 A cookbook to initialise windows and install common applications
 
@@ -17,8 +17,8 @@ A cookbook to initialise windows and install common applications
 ## Recipes
 
 - chocolatey::default
-- initialise_windows::default
-- initialise_windows::chrome
+- developer_machine::default
+- developer_machine::chrome
 
 ## License and Maintainer
 
