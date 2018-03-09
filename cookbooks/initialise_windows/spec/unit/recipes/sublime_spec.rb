@@ -20,5 +20,9 @@ describe 'initialise_windows::sublime' do
     it 'installs sublime' do
       expect(chef_run).to upgrade_chocolatey_package('sublimetext3')
     end
+
+    it 'adds sublime to the machines path variable' do
+      #TODO find out how to check if path variable is being set
+    end
   end
 end

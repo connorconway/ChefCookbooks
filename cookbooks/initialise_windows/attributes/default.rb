@@ -1,0 +1,1 @@
+default['sublime']['installation_path'] = 'C:\Program Files\Sublime Text 3'
