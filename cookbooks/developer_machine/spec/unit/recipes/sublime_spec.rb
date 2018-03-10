@@ -22,7 +22,7 @@ describe 'developer_machine::sublime' do
     end
 
     it 'adds sublime to the machines path variable' do
-      #TODO find out how to check if path variable is being set
+      expect(chef_run).to add_windows_path('C:\Program Files\Sublime Text 3')
     end
   end
 end
